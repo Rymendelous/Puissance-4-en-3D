@@ -1,6 +1,6 @@
 # Compilateur et flags
 CXX      := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra -g
+CXXFLAGS := -std=c++17 -Wall -Wextra -g -MMD -MP
 INCLUDES := -I./include
 
 # Dossiers
@@ -10,16 +10,22 @@ BINDIR   := bin
 
 # Cible finale
 TARGET   := $(BINDIR)/puissance4
+TEST_TARGET := $(BINDIR)/test_suite
 
 # Détection automatique des sources et objets
 SRCS     := $(wildcard $(SRCDIR)/*.cpp)
 OBJS     := $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SRCS))
+DEPS 	 := $(OBJS:.o=.d)
 
 # Règle par défaut
 all: $(TARGET)
+test: $(TEST_TARGET)
+	./$(TEST_TARGET)
 
 # Édition de liens
-$(TARGET): $(OBJS) | $(BINDIR)
+$(TARGET): $(filter-out $(OBJDIR)/test.o, $(OBJS)) | $(BINDIR)
+	$(CXX) $(CXXFLAGS) $^ -o $@
+$(TEST_TARGET): $(filter-out $(OBJDIR)/main.o, $(OBJS)) | $(BINDIR)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 # Compilation des .o depuis les .cpp
@@ -41,4 +47,6 @@ clean:
 re: clean all
 
 # Pour éviter les conflits avec des fichiers nommés "all", "clean", etc.
-.PHONY: all clean re
+.PHONY: all clean re test
+
+-include $(DEPS)

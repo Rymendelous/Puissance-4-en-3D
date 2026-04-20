@@ -9,7 +9,7 @@ enum class Pion {
     Noir
 };
 
-std::string toString(Pion p){
+inline std::string toString(Pion p){
     switch (p){
         case Pion::Blanc: return "O";
         case Pion::Noir : return "X";
