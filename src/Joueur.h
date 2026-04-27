@@ -12,6 +12,7 @@ class Joueur
 {
 public:
     Joueur(std::string nom, Pion couleur);
+    Joueur( Pion couleur);
     Joueur( const Joueur & other);
     Joueur & operator=( const Joueur & other);
 

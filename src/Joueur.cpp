@@ -10,6 +10,12 @@ Joueur::Joueur(string nom, Pion couleur)
     this->couleur= couleur;
 }
 
+Joueur::Joueur(Pion couleur)
+{
+    this->nom = "Circe";
+    this->couleur= couleur;
+}
+
 Joueur::~Joueur()
 {
 

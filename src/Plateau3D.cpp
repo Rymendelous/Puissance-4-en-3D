@@ -83,6 +83,7 @@ int Plateau3D::ajouter_pion(int p_longueur, int p_largeur, Pion p){
             return i;
         }
     }
+    return -1;
 }
 
 int Plateau3D::compter_pions_direction(int x, int y, int z, int dx, int dy, int dz, Pion p) const {
@@ -121,4 +122,12 @@ bool Plateau3D::verifier_victoire(int x, int y, int z, Pion p) const{
         if (compte >= 4) return true;
     }
     return false;
+}
+
+int Plateau3D::get_largeur()const{
+    return this->largeur;
+}
+
+int Plateau3D::get_longueur()const{
+    return this-> longueur;
 }

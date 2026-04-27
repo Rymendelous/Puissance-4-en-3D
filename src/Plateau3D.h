@@ -27,6 +27,8 @@ public:
 
     bool verifier_victoire(int x, int y, int z, Pion p) const;
 
+    int get_largeur()const;
+    int get_longueur()const;
 
 private:
     static constexpr int hauteur = 4;
