@@ -2,6 +2,7 @@
 
 #include "Pion.hpp"
 #include "Plateau3D.h"
+#include "JoueurHumain.h"
 
 using namespace std;
 
@@ -17,6 +18,13 @@ int main(){
 
     plat.affiche();
 
-    cout<<"test : " <<plat.verifier_victoire(1,2,0,Pion::Blanc)<<endl;
+    cout<<"test : " <<plat.verifier_victoire(1,2,0,Pion::Blanc)<<std::endl;
+
+    JoueurHumain j("bob",Pion::Blanc);
+    pair<int,int> coup;
+    coup = j.choisirCoup(plat);
+    cout<< coup.first<<","<<coup.second<<std::endl;
+
+    plat.affiche();
 
 }

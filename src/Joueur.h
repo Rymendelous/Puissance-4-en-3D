@@ -12,9 +12,12 @@ class Joueur
 {
 public:
     Joueur(std::string nom, Pion couleur);
+    Joueur( const Joueur & other);
+    Joueur & operator=( const Joueur & other);
+
     virtual ~Joueur();
 
-    virtual std::pair<int, int> choisirCoup(const Plateau3D& plateau) ;
+    virtual std::pair<int, int> choisirCoup(const Plateau3D& plateau) =0 ;
 
     std::string getNom() const;
     Pion getCouleur() const ;

@@ -22,3 +22,17 @@ std::string Joueur::getNom() const{
 Pion Joueur::getCouleur() const {
     return this->couleur;
 }
+
+Joueur::Joueur( const Joueur & other){
+    this->couleur=other.couleur;
+    this->nom=other.nom;
+}
+
+
+Joueur & Joueur::operator=( const Joueur & other){
+    if( this != &other){
+    this->couleur= other.couleur;
+    this->nom= other.nom;
+    }
+    return (*this);
+}

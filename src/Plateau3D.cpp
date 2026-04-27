@@ -64,11 +64,23 @@ void Plateau3D::affiche(){
 
 }
 
-void Plateau3D::ajouter_pion(int p_longueur, int p_largeur, Pion p){
+bool Plateau3D::est_coup_valide(int x, int y) const {
+    if (x < 0 || x >= largeur || y < 0 || y >= longueur) {
+        return false;
+    }
+
+    return get_pion(x, y, hauteur - 1) == Pion::Vide;
+}
+
+int Plateau3D::ajouter_pion(int p_longueur, int p_largeur, Pion p){
+    if (!this->est_coup_valide(p_longueur,p_largeur)){
+        return -1;
+    }
+
     for (int i =0 ; i < hauteur ; i++){
         if (this->get_pion(p_longueur,p_largeur,i)== Pion::Vide){
             this->def_pion(p_longueur,p_largeur,i,p);
-            break;
+            return i;
         }
     }
 }

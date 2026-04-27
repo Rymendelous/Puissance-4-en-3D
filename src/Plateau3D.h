@@ -19,9 +19,9 @@ public:
     Plateau3D(const Plateau3D &other);
     Plateau3D& operator=(const Plateau3D &other);
 
-    
+    bool est_coup_valide(int x, int y) const;
 
-    void ajouter_pion(int largeur, int longueur, Pion p);
+    int ajouter_pion(int largeur, int longueur, Pion p);
 
     void affiche();
 
