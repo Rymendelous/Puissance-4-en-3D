@@ -5,6 +5,7 @@
 Plateau3D::Plateau3D()
 {
     this->grille.fill(Pion::Vide);
+    this->initialiser_lignes();
 }
 
 Plateau3D::~Plateau3D()
@@ -15,11 +16,13 @@ Plateau3D::~Plateau3D()
 Plateau3D::Plateau3D(const Plateau3D &other){
 
     this->grille = other.grille;
+    this->LIGNES_POSSIBLES = other.LIGNES_POSSIBLES;
 }
 
 Plateau3D& Plateau3D::operator=(const Plateau3D &other){
     if (&other != this){
         this->grille=other.grille;
+        this->LIGNES_POSSIBLES = other.LIGNES_POSSIBLES;
     }
     return *this;
 }
@@ -39,6 +42,11 @@ int Plateau3D::index(int p_longueur, int p_largeur, int p_hauteur) const{
 Pion Plateau3D::get_pion(int p_longueur, int p_largeur, int p_hauteur)const{
     return this->grille[this-> index(p_longueur,p_largeur,p_hauteur)];
 }
+
+Pion Plateau3D::get_pion(int index)const{
+    return this->grille[index];
+}
+
 void Plateau3D::def_pion(int p_longueur, int p_largeur, int p_hauteur, Pion p){
     this->grille[this-> index(p_longueur,p_largeur,p_hauteur)]=p;
 }
@@ -92,6 +100,12 @@ int Plateau3D::ajouter_pion(int p_longueur, int p_largeur, Pion p){
     for (int i =0 ; i < hauteur ; i++){
         if (this->get_pion(p_longueur,p_largeur,i)== Pion::Vide){
             this->def_pion(p_longueur,p_largeur,i,p);
+            
+            this->nbr_pions_places++;
+            if(this->verifier_victoire(p_longueur,p_largeur,i,p) or this->nbr_pions_places==this->get_total_emplacements()){
+                this->plateau_termine = true;
+            }
+
             return i;
         }
     }
@@ -146,4 +160,52 @@ int Plateau3D::get_longueur()const{
 
 int Plateau3D::get_total_emplacements()const{
     return (largeur*longueur*hauteur);
+}
+
+int Plateau3D::retirer_pion(int p_longueur, int p_largeur){
+    for(int i= hauteur-1;i>=0;i--){
+        if (this->get_pion(p_longueur,p_largeur,i)!=Pion::Vide){
+            this->def_pion(p_longueur,p_largeur,i,Pion::Vide);
+            return i;
+        }
+    }
+    return -1;
+}
+
+void Plateau3D::initialiser_lignes(){
+    this->LIGNES_POSSIBLES.clear();
+    Vec3 dir;
+    for(int z = 0; z < hauteur; ++z){
+        for (int y = 0; y < largeur; ++y){
+            for (int x = 0; x < longueur; ++x){
+                for (int i=0 ; i<13; i++) {
+                    dir=directions[i];
+                    int x4 = x + 3 * dir.dx;
+                    int y4 = y + 3 * dir.dy;
+                    int z4 = z + 3 * dir.dz;
+
+
+                    if (x4 >= 0 and x4 < longueur and y4 >= 0 and y4 < largeur and z4 >= 0 and z4 < hauteur) {
+
+                        std::vector<int> ligne;
+                        for (int i = 0; i < 4; ++i) {
+                            ligne.push_back(this->index(x+ i*dir.dx,dir.dy*i +y,z+i*dir.dz));
+                            
+                        }
+                        LIGNES_POSSIBLES.push_back(ligne);
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+std::vector<std::vector<int>> Plateau3D::lignes_possibles()const{
+    return this-> LIGNES_POSSIBLES;
+}
+
+bool Plateau3D::est_termine(){
+    return this->plateau_termine;
 }

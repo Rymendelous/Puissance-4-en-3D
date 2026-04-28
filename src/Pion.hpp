@@ -17,4 +17,14 @@ inline std::string toString(Pion p){
     }
 }
 
+inline Pion operator!(Pion p){
+    switch (p)
+    {
+    case Pion::Blanc: return Pion::Noir;
+    case Pion::Noir:  return Pion::Blanc;
+    default:
+        return Pion::Vide;
+    }
+}
+
 #endif
