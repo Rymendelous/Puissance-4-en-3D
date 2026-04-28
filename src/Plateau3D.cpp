@@ -43,29 +43,41 @@ void Plateau3D::def_pion(int p_longueur, int p_largeur, int p_hauteur, Pion p){
     this->grille[this-> index(p_longueur,p_largeur,p_hauteur)]=p;
 }
 
-void Plateau3D::affiche(){
-    for (int z = 0 ; z<this->hauteur ; z++){
-        std::cout<<"Etage numero "<< z<< std::endl;
-        std::cout<< "  ";
-        for (int index_longueur=0 ; index_longueur <this->longueur; index_longueur++){
-            std::cout<<index_longueur<<" ";
-        }
-        std::cout<<std::endl;
-
-        for (int y = 0 ; y < this-> largeur; y++){
-            std::cout<< y << " ";
-            for( int  x = 0 ; x < this->longueur; x++){
-                std::cout <<toString(this->get_pion(x,y,z))<<" ";
-            }
-            std::cout <<std::endl;
-        }
-        std::cout<<std::endl;
+void Plateau3D::affiche() {
+    // 1. Afficher les titres des étages sur une seule ligne
+    for (int z = 0; z < this->hauteur; z++) {
+        std::cout << "- Etage " << z << " -     "; // Espacement entre étages
     }
+    std::cout << std::endl;
 
+    // 2. Afficher les indices des colonnes (X) pour chaque étage
+    for (int z = 0; z < this->hauteur; z++) {
+        std::cout << "  "; // Décalage pour l'indice Y
+        for (int x = 0; x < this->longueur; x++) {
+            std::cout << x << " ";
+        }
+        std::cout << "    "; // Espace entre les grilles
+    }
+    std::cout << std::endl;
+
+    // 3. Afficher les lignes (Y)
+    for (int y = 0; y < this->largeur; y++) {
+        // Pour chaque ligne Y, on parcourt tous les étages Z
+        for (int z = 0; z < this->hauteur; z++) {
+            std::cout << y << " "; // Indice de ligne à gauche
+            
+            for (int x = 0; x < this->longueur; x++) {
+                std::cout << toString(this->get_pion(x, y, z)) << " ";
+            }
+            std::cout << "    "; // Espace entre les grilles d'un même étage
+        }
+        std::cout << std::endl; // On passe à la ligne Y suivante pour tous les étages
+    }
+    std::cout << std::endl;
 }
 
 bool Plateau3D::est_coup_valide(int x, int y) const {
-    if (x < 0 || x >= largeur || y < 0 || y >= longueur) {
+    if (x < 0 || x >= longueur || y < 0 || y >= largeur) {
         return false;
     }
 
@@ -130,4 +142,8 @@ int Plateau3D::get_largeur()const{
 
 int Plateau3D::get_longueur()const{
     return this-> longueur;
+}
+
+int Plateau3D::get_total_emplacements()const{
+    return (largeur*longueur*hauteur);
 }

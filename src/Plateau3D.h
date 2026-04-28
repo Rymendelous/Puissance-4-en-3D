@@ -29,6 +29,7 @@ public:
 
     int get_largeur()const;
     int get_longueur()const;
+    int get_total_emplacements()const;
 
 private:
     static constexpr int hauteur = 4;

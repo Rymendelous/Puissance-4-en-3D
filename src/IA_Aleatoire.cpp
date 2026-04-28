@@ -33,7 +33,7 @@ std::pair<int, int> IA_Aleatoire::choisirCoup(const Plateau3D& plateau) {
     std::vector<std::pair<int, int>> coupsPossibles;
 
     // 1. On scanne le plateau pour voir ce qui est jouable maintenant
-    for (int x = 0; x < plateau.get_largeur(); ++x) {
+    for (int x = 0; x < plateau.get_longueur(); ++x) {
         for (int y = 0; y < plateau.get_largeur(); ++y) {
             if (plateau.est_coup_valide(x, y)) {
                 coupsPossibles.push_back({x, y});
