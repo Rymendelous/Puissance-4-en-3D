@@ -6,6 +6,13 @@
 
 using namespace std;
 
+/**
+ * @class JoueurHumain
+ * @brief Représente un joueur humain.
+ *
+ * Cette classe permet au joueur de choisir ses coups au clavier.
+ */
+
 JoueurHumain::JoueurHumain(string nom, Pion couleur) : Joueur(nom,couleur) {
 
 }
@@ -24,6 +31,11 @@ JoueurHumain & JoueurHumain::operator=( const JoueurHumain & other) {
     return (*this);
 }
 
+/**
+     * @brief Demande au joueur humain de choisir un coup.
+     * @param plateau Plateau de jeu.
+     * @return Paire d'entiers représentant le coup choisi.
+     */
 
 std::pair<int, int> JoueurHumain::choisirCoup(const Plateau3D & plateau){
     int largeur,longueur;
