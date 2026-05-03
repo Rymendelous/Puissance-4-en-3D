@@ -6,13 +6,18 @@
 
 Ce projet est un jeu de Puissance 4 en C++.
 
-## Classes principales
+## Classes du projet
 
+Cette documentation contient l’ensemble des classes du projet.
+
+- IA_Aleatoire
+- IA_MinMax
 - Joueur
 - JoueurHumain
 - JoueurIA
 - Partie
 - Plateau3D
+- Vec3
 
 ## Lancement
 
