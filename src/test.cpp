@@ -35,23 +35,23 @@ int main(){
     plat.affiche();
 
 
-    IA_MinMax  j1("IA bob",Pion::Blanc);
-    IA_Aleatoire  j2("IA bob 2",Pion::Noir);
+    IA_MinMax  j1("IA minou",Pion::Blanc);
+    IA_MinMax  j2("IA bob 2",Pion::Noir);
     
     Partie p(&j1,&j2);
-    //p.lancer();
+    p.lancer();
     
 
-    plat.ajouter_pion(2,1,Pion::Noir);
-    plat.ajouter_pion(2,2,Pion::Noir);
-    plat.ajouter_pion(2,3,Pion::Noir);
-
-
-    plat.affiche();
-    cout<<j1.evaluerPlateau(plat)<<endl;
-    pair<int,int> coup=j1.choisirCoup(plat);
-    
-    cout<<coup.first<<", "<<coup.second<<endl;
+//    plat.ajouter_pion(2,1,Pion::Noir);
+//    plat.ajouter_pion(2,2,Pion::Noir);
+//    plat.ajouter_pion(2,3,Pion::Noir);
+//
+//
+//    plat.affiche();
+//    cout<<j1.evaluerPlateau(plat)<<endl;
+//    pair<int,int> coup=j1.choisirCoup(plat);
+//    
+//    cout<<coup.first<<", "<<coup.second<<endl;
     
 
 }

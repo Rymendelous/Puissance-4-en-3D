@@ -21,7 +21,7 @@ public:
 
     int evaluer(int nbrPions,int Pions_adverse)const;
 
-    int min_max(Plateau3D& plateau, int profondeur, bool estMax);
+    int min_max(Plateau3D& plateau, int profondeur,int alpha, int beta, bool estMax);
 
 protected:
 

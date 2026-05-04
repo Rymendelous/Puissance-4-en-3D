@@ -30,8 +30,8 @@ IA_MinMax & IA_MinMax::operator=( const IA_MinMax & other){
 }
 
 int IA_MinMax::evaluer(int nbrIA,int nbrAdv) const {
-    if (nbrIA == 4)  return 10000;
-    if (nbrAdv == 4) return -10000;
+    if (nbrIA == 4)  return 100000;
+    if (nbrAdv == 4) return -100000;
 
     if (nbrIA == 3 and nbrAdv == 0) return 100;
     if (nbrAdv == 3 and nbrIA == 0) return -100; 
@@ -73,7 +73,7 @@ int IA_MinMax::evaluerPlateau(const Plateau3D& plateau){
     return score;
 }
 
-int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, bool estMax){
+int IA_MinMax::min_max(Plateau3D& plateau, int profondeur,int alpha, int beta, bool estMax){
 
     if (profondeur==0 or plateau.est_termine()){
         return this->evaluerPlateau(plateau);
@@ -86,13 +86,16 @@ int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, bool estMax){
                 if (plateau.est_coup_valide(x,y)){
                     plateau.ajouter_pion(x,y,this->couleur);
 
-                    int score = this-> min_max(plateau,profondeur-1,false);
+                    int score = this-> min_max(plateau,profondeur-1,alpha,beta,false);
 
                     plateau.retirer_pion(x,y);
 
                     meilleurScore=max(score,meilleurScore);
+                    alpha = std::max(alpha, score);
+                    if (beta<=alpha){break;}
                 }
             }
+            if (beta<=alpha){break;}
         }
     }else {
     int pireScore = 1000000;
@@ -100,11 +103,15 @@ int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, bool estMax){
         for (int y = 0; y < plateau.get_largeur(); y++) {
             if (plateau.est_coup_valide(x, y)) {
                 plateau.ajouter_pion(x, y, !this->couleur); 
-                int score = this->min_max(plateau, profondeur - 1, true);
+                int score = this->min_max(plateau, profondeur - 1,alpha,beta, true);
                 plateau.retirer_pion(x, y);
                 pireScore = std::min(pireScore, score);
+                beta = std::min(beta,score);
+
+                if (beta<=alpha){break;}
             }
         }
+        if (beta<=alpha){break;}
     }
     return pireScore;
 }
@@ -126,7 +133,7 @@ std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
                 
                 // On lance le minimax à la profondeur voulue (ex: 3)
                 // On commence par 'false' car on vient de jouer, c'est au tour de l'adversaire
-                int score = this->min_max(plateauSimule, 1, false);
+                int score = this->min_max(plateauSimule, 6,-1000000,1000000, false);
                 
                 
 
