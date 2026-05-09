@@ -30,7 +30,7 @@ JoueurHumain & JoueurHumain::operator=( const JoueurHumain & other) {
 std::pair<int, int> JoueurHumain::choisirCoup(const Plateau3D & plateau){
     int largeur,longueur;
     bool coup_invalide=true;
-
+//boucle while pour forcer le joueur a donner un coup valide
     while (coup_invalide){
         cout<<this->nom<<" choisis un coup."<<endl;
         cout<<"index Colonne : ";

@@ -24,6 +24,8 @@ public:
     int min_max(Plateau3D& plateau, int profondeur,int alpha, int beta, bool estMax);
 
 protected:
+static constexpr int ordreX[] = {2, 1, 3, 0, 4}; // je priorise les lignes aux centre et je met dans une liste à la main
+static constexpr int ordreY[] = {1, 2, 0, 3};    // je priorise les colonnes au centre et je met dans une liste à la main
 
 };
 

@@ -1,6 +1,8 @@
 #include "IA_MinMax.h"
 #include "JoueurIA.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -34,10 +36,10 @@ int IA_MinMax::evaluer(int nbrIA,int nbrAdv) const {
     if (nbrAdv == 4) return -100000;
 
     if (nbrIA == 3 and nbrAdv == 0) return 100;
-    if (nbrAdv == 3 and nbrIA == 0) return -100; 
+    if (nbrAdv == 3 and nbrIA == 0) return -500; //je diminue encore plus le score de l'adversaire je trouve que -100 c'est pas assez 
 
     if (nbrIA == 2 and nbrAdv == 0) return 10;
-    if (nbrAdv == 2 and nbrIA == 0) return -10;
+    if (nbrAdv == 2 and nbrIA == 0) return -20; //pareil ici
     return 0;
 }
 void index(const std::vector<int>& lignes){
@@ -73,51 +75,49 @@ int IA_MinMax::evaluerPlateau(const Plateau3D& plateau){
     return score;
 }
 
-int IA_MinMax::min_max(Plateau3D& plateau, int profondeur,int alpha, int beta, bool estMax){
+int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, int alpha, int beta, bool estMax) {
 
-    if (profondeur==0 or plateau.est_termine()){
+    if (profondeur == 0 or plateau.est_termine()) {
         return this->evaluerPlateau(plateau);
     }
 
-    if (estMax){
+    if (estMax) { //cas ou l'ia joue
         int meilleurScore = -1000000;
-        for (int x=0; x < plateau.get_longueur();x++){
-            for (int y=0; y < plateau.get_largeur(); y++){
-                if (plateau.est_coup_valide(x,y)){
-                    plateau.ajouter_pion(x,y,this->couleur);
+        for (int x : ordreX) { //on commence par les cases du milieu au lieu de la case haut gauche
+            for (int y : ordreY) { 
+                if (plateau.est_coup_valide(x, y)) {
+                    plateau.ajouter_pion(x, y, this->couleur);
+                    int score = this->min_max(plateau,profondeur-1,alpha,beta, false);
+                    plateau.retirer_pion(x, y);
 
-                    int score = this-> min_max(plateau,profondeur-1,alpha,beta,false);
-
-                    plateau.retirer_pion(x,y);
-
-                    meilleurScore=max(score,meilleurScore);
-                    alpha = std::max(alpha, score);
+                    meilleurScore = max(score,meilleurScore);
+                    alpha = std::max(alpha,score);
                     if (beta<=alpha){break;}
                 }
             }
-            if (beta<=alpha){break;}
+            if(beta<=alpha) {break;}
         }
-    }else {
-    int pireScore = 1000000;
-    for (int x = 0; x < plateau.get_longueur(); x++) {
-        for (int y = 0; y < plateau.get_largeur(); y++) {
-            if (plateau.est_coup_valide(x, y)) {
-                plateau.ajouter_pion(x, y, !this->couleur); 
-                int score = this->min_max(plateau, profondeur - 1,alpha,beta, true);
-                plateau.retirer_pion(x, y);
-                pireScore = std::min(pireScore, score);
-                beta = std::min(beta,score);
+        return meilleurScore; 
+    } 
+    else { //cas ou ladversaire joue
+        int pireScore = 1000000;
+        for (int x : ordreX) { 
+            for (int y : ordreY) { 
+                if (plateau.est_coup_valide(x,y)) {
+                    plateau.ajouter_pion(x,y,!this->couleur); 
+                    int score = this->min_max(plateau,profondeur-1,alpha,beta,true);
+                    plateau.retirer_pion(x,y);
 
-                if (beta<=alpha){break;}
+                    pireScore = std::min(pireScore, score);
+                    beta = std::min(beta,score);
+                    if (beta <= alpha){break;}
+                }
             }
+            if(beta<=alpha) {break;}
         }
-        if (beta<=alpha){break;}
+        return pireScore;
     }
-    return pireScore;
 }
-   return 0;
-}
-
 
 std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
     int meilleurScore = -1000000;
@@ -126,19 +126,14 @@ std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
     // On fait une copie locale pour travailler
     Plateau3D plateauSimule = plateauActuel; 
 
-    for (int x = 0; x < 4; x++) {
-        for (int y = 0; y < 4; y++) {
+for (int x : ordreX) {
+    for (int y : ordreY) {
             if (plateauSimule.est_coup_valide(x, y)) {
                 plateauSimule.ajouter_pion(x, y, this->couleur);
                 
-                // On lance le minimax à la profondeur voulue (ex: 3)
-                // On commence par 'false' car on vient de jouer, c'est au tour de l'adversaire
-                int score = this->min_max(plateauSimule, 6,-1000000,1000000, false);
+                int score = this->min_max(plateauSimule, 6, -1000000, 1000000, false);
                 
-                
-
                 if (score > meilleurScore) {
-                    //plateauSimule.affiche();
                     meilleurScore = score;
                     meilleurCoup = {x, y};
                 }
