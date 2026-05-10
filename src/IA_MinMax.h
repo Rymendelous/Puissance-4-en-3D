@@ -26,6 +26,7 @@ public:
 protected:
 static constexpr int ordreX[] = {2, 1, 3, 0, 4}; // je priorise les lignes aux centre et je met dans une liste à la main
 static constexpr int ordreY[] = {1, 2, 0, 3};    // je priorise les colonnes au centre et je met dans une liste à la main
+int profondeur; //profondeur qu'on va utiliser dans le main quand on va faire jouer la meme ia dans une partie avec 2profondeurs differentes
 
 };
 

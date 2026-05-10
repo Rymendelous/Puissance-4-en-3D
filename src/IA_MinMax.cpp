@@ -6,7 +6,7 @@
 
 using namespace std;
 
-IA_MinMax::IA_MinMax(std::string nom, Pion couleur) : JoueurIA(nom,couleur)
+IA_MinMax::IA_MinMax(std::string nom, Pion couleur,int profondeur) : JoueurIA(nom,couleur)
 {
 
 }
@@ -182,7 +182,7 @@ for (int x : ordreX) {
             if (plateauSimule.est_coup_valide(x, y)) {
                 plateauSimule.ajouter_pion(x, y, this->couleur);
                 
-                int score = this->min_max(plateauSimule, 6, -1000000, 1000000, false);
+                int score = this->min_max(plateauSimule, 6, -1000000, 1000000, false); //modifier ici pour la profondeur 
                 
                 if (score > meilleurScore) {
                     meilleurScore = score;
