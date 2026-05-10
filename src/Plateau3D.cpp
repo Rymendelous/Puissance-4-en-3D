@@ -120,7 +120,7 @@ int Plateau3D::compter_pions_direction(int x, int y, int z, int dx, int dy, int 
         int nz = z + i * dz;
 
         // 1. Vérifier si on sort du plateau (très important pour éviter un crash)
-        if (nx < 0 || nx >= largeur || ny < 0 || ny >= longueur || nz < 0 || nz >= hauteur) {
+        if (nx < 0 || nx >= longueur || ny < 0 || ny >= largeur || nz < 0 || nz >= hauteur) { //longueur et largeur avait été inversé c'est rectifier maintenant 
             break; 
         }
 

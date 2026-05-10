@@ -58,7 +58,7 @@ private:
     std::vector<std::vector<int>> LIGNES_POSSIBLES;
     void initialiser_lignes();
     
-    int index(int hauteur, int largeur, int longueur) const;
+    int index(int longueur, int largeur, int hauteur) const;
 
 
     void def_pion(int hauteur, int largeur, int longueur, Pion p);
