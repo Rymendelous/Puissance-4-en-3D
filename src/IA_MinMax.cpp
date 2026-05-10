@@ -31,6 +31,7 @@ IA_MinMax & IA_MinMax::operator=( const IA_MinMax & other){
     return (*this);
 }
 
+//elle evalue sur une ligne 
 int IA_MinMax::evaluer(int nbrIA,int nbrAdv) const {
     if (nbrIA == 4)  return 100000;
     if (nbrAdv == 4) return -100000;
@@ -56,23 +57,42 @@ void index(const std::vector<int>& lignes){
 }
 
 int IA_MinMax::evaluerPlateau(const Plateau3D& plateau){
-    int score = 0;
+    int scoreTotal = 0; 
+    int menacesIA = 0; //nombre de lignes ou ya trois pions aligné chez l'ia ie je peux gagner
+    int menacesAdv = 0; //nombre de lignes ou ya trois pions aligné chez ladversaire ie attention il va gagner 
     const std::vector<std::vector<int>>& lignes = plateau.lignes_possibles();
 
     for (int i = 0; i<(int)lignes.size(); i++){
         const std::vector<int>& ligne = lignes[i];
-        int scoreIA(0),scoreAdv(0);
+
+        int nbrIA = 0; //nombre de pions IA sur une ligne 
+        int nbrAdv = 0; //nombre de pions de l'adversaire sur une ligne 
+
         for (int j = 0; j<(int)ligne.size();j++){
             int index = ligne[j];
             if (plateau.get_pion(index)==this->couleur){
-                scoreIA++;
+                nbrIA++;
             }else if (plateau.get_pion(index)!=Pion::Vide){
-                scoreAdv++;
+                nbrAdv++;
             }
         }
-        score+=this->evaluer(scoreIA,scoreAdv);
+        scoreTotal+=this->evaluer(nbrIA,nbrAdv);
+
+        if (nbrIA==3 && nbrAdv==0) {
+            menacesIA++;
+        }
+        if (nbrAdv==3 && nbrIA==0) {
+            menacesAdv++;
+        }
     }
-    return score;
+    //en plus du score de base on le modifie selon qu'il ya deux lignes de trois pions chez l'ia ou ladversaire
+    if (menacesIA>=2) {
+        scoreTotal= scoreTotal+50000;  //l'ia a deux lignes avec 3pions j'augmente enormement son score pour l'ia comprenne qu'il faut mettre un pion a cet endroit
+    }
+    if (menacesAdv>=2) {
+        scoreTotal= scoreTotal-80000; //score tres negatif pour ladversaire comme ça l'ia peut prevoir les coups a lavance pour pas etre dans ce cas
+    }
+    return scoreTotal;
 }
 
 int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, int alpha, int beta, bool estMax) {
