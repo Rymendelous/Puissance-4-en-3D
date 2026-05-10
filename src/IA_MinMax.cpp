@@ -119,12 +119,43 @@ int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, int alpha, int beta, 
     }
 }
 
+//l'ia va choisir le plus gros score et risquer de laisser passer une opportunité de bloquer une ligne de 3 de l'adversaire
+//donc en plus de l'utilisation de l'algo minmax je lui dis en parallele si tu vois que ya 3 pions adversaire aligné bloque les
+//et si tu vois que toi l'ia tu peux immédiatement gagné en ajoutant un pion a une ligne de 3 pions fais le meme si ton algo minmax te dis
+//que tu as un score très élevé à un autre endroit 
 std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
+     // On fait une copie locale pour travailler
+    Plateau3D plateauSimule = plateauActuel; 
+    //je regarde si l'ia peut gagner directement 
+    for (int x : ordreX) {
+        for (int y : ordreY) {
+            if (plateauSimule.est_coup_valide(x, y)) {
+                int z = plateauSimule.ajouter_pion(x, y, this->couleur);
+                if (plateauSimule.verifier_victoire(x, y, z, this->couleur)) {
+                    return {x, y}; //je pose mon pion a cette emplacement
+                }
+                plateauSimule.retirer_pion(x, y);
+            }
+        }
+    }
+
+    //je bloque l'adversaire
+    for (int x : ordreX) {
+        for (int y : ordreY) {
+            if (plateauSimule.est_coup_valide(x, y)) {
+                int z = plateauSimule.ajouter_pion(x, y, !this->couleur);
+                if (plateauSimule.verifier_victoire(x, y, z, !this->couleur)) {
+                    plateauSimule.retirer_pion(x, y); 
+                    return {x, y}; //je bloque ladversaire à cet emplacement 
+                }
+                plateauSimule.retirer_pion(x, y);
+            }
+        }
+    }
+
+    //maintenant que j'ai fais ces vérif je peux appeler minmax 
     int meilleurScore = -1000000;
     std::pair<int, int> meilleurCoup = {0, 0};
-    
-    // On fait une copie locale pour travailler
-    Plateau3D plateauSimule = plateauActuel; 
 
 for (int x : ordreX) {
     for (int y : ordreY) {
