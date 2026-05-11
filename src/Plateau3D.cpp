@@ -4,6 +4,8 @@
 
 Plateau3D::Plateau3D()
 {
+    this->nbr_pions_places = 0;    //on l'initialise car sinon il va contenir des valeurs random
+    this->plateau_termine = false; //pareil on initialise a false 
     this->grille.fill(Pion::Vide);
     this->initialiser_lignes();
 }
@@ -14,13 +16,16 @@ Plateau3D::~Plateau3D()
 }
 
 Plateau3D::Plateau3D(const Plateau3D &other){
-
+    this->nbr_pions_places = other.nbr_pions_places;
+    this->plateau_termine =other.plateau_termine;
     this->grille = other.grille;
     this->LIGNES_POSSIBLES = other.LIGNES_POSSIBLES;
 }
 
 Plateau3D& Plateau3D::operator=(const Plateau3D &other){
     if (&other != this){
+        this->nbr_pions_places = other.nbr_pions_places;
+        this->plateau_termine =other.plateau_termine;
         this->grille=other.grille;
         this->LIGNES_POSSIBLES = other.LIGNES_POSSIBLES;
     }
