@@ -30,16 +30,18 @@ void visualiserLignes(const Plateau3D& plateau) {
 }
 
 
-int main(){
-    Plateau3D plat;
-    plat.affiche();
+//commande K C sur mac pour commenter
+//command K U pour decommenter
+// int main(){
+//     Plateau3D plat;
+//     plat.affiche();
 
 
-    IA_MinMax  j1("IA minou",Pion::Blanc);
-    IA_MinMax  j2("IA bob 2",Pion::Noir);
+//     IA_MinMax  j1("IA minou",Pion::Blanc);
+//     IA_MinMax  j2("IA bob 2",Pion::Noir);
     
-    Partie p(&j1,&j2);
-    p.lancer();
+//     Partie p(&j1,&j2);
+//     p.lancer();
     
 
 //    plat.ajouter_pion(2,1,Pion::Noir);
@@ -54,4 +56,37 @@ int main(){
 //    cout<<coup.first<<", "<<coup.second<<endl;
     
 
+//}
+
+//POUR TESTER IA BETE CONTRE IA FORTE PENDANT 20 PARTIES
+int main(){
+    int n = 10;
+    //test ia minmax avec l'ia bete pour voir si l'ia minmax gagne tout le temps
+    IA_MinMax expert("MinMax_Expert", Pion::Blanc, 4); //profondeur 4 
+    IA_Aleatoire bete("IA_Bete", Pion::Noir);
+
+    int victoiresExpert = 0;
+    int victoiresBete = 0;
+    int matchsnuls = 0;
+
+     for(int i=0; i<n; i++){
+        cout << "Partie " << i+1 << " en cours..." << endl;
+        Partie p(&expert, &bete);
+        Joueur* gagnant = p.lancer_silencieux();
+        //on incrémente les compteurs 
+        if(gagnant == &expert){
+            victoiresExpert++;
+        } 
+        else if(gagnant == &bete){
+            victoiresBete++;
+        } 
+        else{
+            matchsnuls++;
+        }
+    }
+    cout<<"résultat final sur les"<<n<<"parties:"<<endl;
+    cout<< "Victoires de "<<expert.getNom()<< ": "<<victoiresExpert<<endl;
+    cout<< "Victoires de "<<bete.getNom()<<": "<<victoiresBete<<endl;
+    cout<< "Matchs nuls : "<<matchsnuls<<endl;
 }
+

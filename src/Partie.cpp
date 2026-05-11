@@ -57,8 +57,8 @@ void Partie::lancer() {
     bool gagne = false;
     int max_tours = this->plateau.get_total_emplacements();
     Joueur* joueurActuel = this->J1; // On commence par le J1
-
-    this->plateau.affiche(); // Affichage initial (vide)
+    
+    this->plateau.affiche(); // Affichage initial (vide)  
 
     while (!gagne && this->tours_joues < max_tours) {
         // Exécuter le tour
@@ -75,5 +75,33 @@ void Partie::lancer() {
 
     if (!gagne) {
         std::cout << "Match nul ! Le plateau est plein." << std::endl;
+    }
+}
+
+Joueur* Partie::lancer_silencieux(){
+    bool gagne = false;
+    int max_tours = this->plateau.get_total_emplacements(); 
+    Joueur* joueurActuel = this->J1;
+
+    while (gagne == false && this->tours_joues < max_tours) {
+        
+        std::pair<int, int> xy = joueurActuel->choisirCoup(this->plateau);
+        int z = this->plateau.ajouter_pion(xy.first, xy.second, joueurActuel->getCouleur());
+        gagne = this->plateau.verifier_victoire(xy.first, xy.second, z, joueurActuel->getCouleur());
+
+        if (gagne == false) {
+            if (joueurActuel == this->J1){
+                joueurActuel = this->J2;
+            }else{
+                joueurActuel = this->J1;
+            }
+            this->tours_joues++;
+        }
+    }
+
+    if (gagne == true) {
+        return joueurActuel;
+    } else {
+        return nullptr;
     }
 }
