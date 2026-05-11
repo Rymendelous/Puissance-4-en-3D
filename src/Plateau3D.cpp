@@ -92,6 +92,7 @@ bool Plateau3D::est_coup_valide(int x, int y) const {
     return get_pion(x, y, hauteur - 1) == Pion::Vide;
 }
 
+
 int Plateau3D::ajouter_pion(int p_longueur, int p_largeur, Pion p){
     if (!this->est_coup_valide(p_longueur,p_largeur)){
         return -1;
@@ -162,10 +163,20 @@ int Plateau3D::get_total_emplacements()const{
     return (largeur*longueur*hauteur);
 }
 
+//RECTIFICATIONS POUR retirer_pion
+//ici yavait un probleme le compteur nbr_pions_places n'était pas mis a jour
+//pareil pour partie_termine() qui n'était pas mis a false 
+//si l'ia joue donc appelle ajouter_pion et que verifier_victoire est vrai ça met plateau_termine à true
+//maintenant l'ia veut retirer son pion donc on decremente le compteur mais si plateau_termine n'est pas mis a false
+//dans la fonction minmax il sera donc a true et ça va directement arreter l'execution lalgo minmax ne sera meme pas executé
+//donc j'ai bien mis a jour en mettant plateau_termine= false
 int Plateau3D::retirer_pion(int p_longueur, int p_largeur){
     for(int i= hauteur-1;i>=0;i--){
         if (this->get_pion(p_longueur,p_largeur,i)!=Pion::Vide){
             this->def_pion(p_longueur,p_largeur,i,Pion::Vide);
+            this->nbr_pions_places--;
+            //si on enleve un pion necessairement le plateau n'est plus plein et donc la partie n'est pas terminé 
+            this->plateau_termine= false;
             return i;
         }
     }
