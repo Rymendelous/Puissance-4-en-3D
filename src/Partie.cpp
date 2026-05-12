@@ -78,10 +78,10 @@ void Partie::lancer() {
     }
 }
 
-Joueur* Partie::lancer_silencieux(){
+Joueur* Partie::lancer_silencieux(bool j1commence){
     bool gagne = false;
     int max_tours = this->plateau.get_total_emplacements(); 
-    Joueur* joueurActuel = this->J1;
+    Joueur* joueurActuel = j1commence ? this->J1 : this->J2;
 
     while (gagne == false && this->tours_joues < max_tours) {
         

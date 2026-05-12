@@ -66,7 +66,7 @@ public:
      * jusqu'à ce qu'un joueur gagne ou que la partie se termine.
      */
     void lancer();
-    Joueur* lancer_silencieux();
+    Joueur* lancer_silencieux(bool j1commence);
     const Plateau3D& getPlateau() const{
         return this->plateau;
         }

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 #include "Pion.hpp"
 #include "Plateau3D.h"
@@ -58,21 +60,25 @@ void visualiserLignes(const Plateau3D& plateau) {
 
 //}
 
-//POUR TESTER IA BETE CONTRE IA FORTE PENDANT 20 PARTIES
+//POUR TESTER IA BETE CONTRE IA FORTE PENDANT 10 PARTIES
 int main(){
     int n = 10;
+    srand(time(0));
+    bool j1commence = rand() % 2;
     //test ia minmax avec l'ia bete pour voir si l'ia minmax gagne tout le temps
+
+
     IA_MinMax expert("MinMax_Expert", Pion::Blanc, 4); //profondeur 4 
     IA_Aleatoire bete("IA_Bete", Pion::Noir);
 
     int victoiresExpert = 0;
     int victoiresBete = 0;
     int matchsnuls = 0;
-
+     cout<<"Partie IA aleatoire contre IAminmax profondeur 4 en cours"<<endl;
      for(int i=0; i<n; i++){
         cout << "Partie " << i+1 << " en cours..." << endl;
         Partie p(&expert, &bete);
-        Joueur* gagnant = p.lancer_silencieux();
+        Joueur* gagnant = p.lancer_silencieux(j1commence);
         //on incrémente les compteurs 
         if(gagnant == &expert){
             victoiresExpert++;
@@ -88,5 +94,30 @@ int main(){
     cout<< "Victoires de "<<expert.getNom()<< ": "<<victoiresExpert<<endl;
     cout<< "Victoires de "<<bete.getNom()<<": "<<victoiresBete<<endl;
     cout<< "Matchs nuls : "<<matchsnuls<<endl;
-}
 
+//POUR TESTER IA MINMAX CONTRE ELLE MEME AVEC PROFONDEURS DIFFERENTES PENDANT 10 PARTIES
+   cout<<"Partie IAminmax profondeur 4 contre IAminmax profondeur 2 maintenant ..."<<endl;
+    IA_MinMax expert1("MinMax_4", Pion::Blanc, 4);
+    IA_MinMax expert2("MinMax_2", Pion::Noir, 2);
+
+    int victoiresExpert1 = 0;
+    int victoiresExpert2 = 0;
+    matchsnuls = 0;
+
+    for(int i=0;i<n;i++){
+        cout << "Partie " << i+1 << " en cours..." << endl;
+        //pour que ce soit pas biaisé je fais en sorte que c pas tout le temps la meme ia qui joue en premier
+        Partie p(&expert1, &expert2);
+        Joueur* gagnant= p.lancer_silencieux(j1commence);
+        //pour alterner a chaque partie
+        j1commence = !j1commence;
+
+        if(gagnant == &expert1) victoiresExpert1++;
+        else if(gagnant == &expert2) victoiresExpert2++;
+        else matchsnuls++;
+    }
+    cout<<"résultat final sur les"<<n<<"parties:"<<endl;
+    cout<<"Victoires de "<<expert1.getNom()<< ": "<<victoiresExpert1<<endl;
+    cout<<"Victoires de "<<expert2.getNom()<<": "<<victoiresExpert2<<endl;
+    cout<<"Matchs nuls : "<<matchsnuls<<endl;
+}
