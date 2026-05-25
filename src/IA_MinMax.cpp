@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -97,8 +98,12 @@ int IA_MinMax::evaluerPlateau(const Plateau3D& plateau){
 
 int IA_MinMax::min_max(Plateau3D& plateau, int profondeur, int alpha, int beta, bool estMax) {
 
+    // On ajoute un bonus pour gagner le plus vite possible (IA ne fait pas la diff entre gagner dans 1 coup ou dans 4 coups)
     if (profondeur == 0 or plateau.est_termine()) {
-        return this->evaluerPlateau(plateau);
+        int score = this->evaluerPlateau(plateau);
+        if (score > 40000) return score +(profondeur *1000);
+        if (score < 40000) return score - (profondeur *1000);
+        return score;
     }
 
     if (estMax) { //cas ou l'ia joue
@@ -147,6 +152,8 @@ std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
      // On fait une copie locale pour travailler
     Plateau3D plateauSimule = plateauActuel; 
     //je regarde si l'ia peut gagner directement 
+    Pion couleurAdverse = (this->couleur == Pion::Blanc) ? Pion::Noir : Pion::Blanc;
+    
     for (int x : ordreX) {
         for (int y : ordreY) {
             if (plateauSimule.est_coup_valide(x, y)) {
@@ -163,8 +170,8 @@ std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
     for (int x : ordreX) {
         for (int y : ordreY) {
             if (plateauSimule.est_coup_valide(x, y)) {
-                int z = plateauSimule.ajouter_pion(x, y, !this->couleur);
-                if (plateauSimule.verifier_victoire(x, y, z, !this->couleur)) {
+                int z = plateauSimule.ajouter_pion(x, y, couleurAdverse);
+                if (plateauSimule.verifier_victoire(x, y, z, couleurAdverse)) {
                     plateauSimule.retirer_pion(x, y); 
                     return {x, y}; //je bloque ladversaire à cet emplacement 
                 }
@@ -175,22 +182,36 @@ std::pair<int, int> IA_MinMax::choisirCoup(const Plateau3D& plateauActuel){
 
     //maintenant que j'ai fais ces vérif je peux appeler minmax 
     int meilleurScore = -1000000;
-    std::pair<int, int> meilleurCoup = {0, 0};
+    std::vector<std::pair<int, int>> meilleurCoup; //liste pour stocker les mêmes coups
+    int alpha =-1000000;
+    int beta = 1000000;
 
 for (int x : ordreX) {
     for (int y : ordreY) {
             if (plateauSimule.est_coup_valide(x, y)) {
                 plateauSimule.ajouter_pion(x, y, this->couleur);
-                
-                int score = this->min_max(plateauSimule, this->profondeur, -1000000, 1000000, false); //modifier ici pour la profondeur 
+                //on passe profondeur -1 car on vient de jouer un coup
+                int score = this->min_max(plateauSimule, this->profondeur-1, alpha, beta, false); 
                 
                 if (score > meilleurScore) {
                     meilleurScore = score;
-                    meilleurCoup = {x, y};
+                    meilleurCoup.clear(); // on jette, on a trouvé mieux
+                    meilleurCoup.push_back({x,y});
                 }
-                plateauSimule.retirer_pion(x, y);
+                else if(score == meilleurScore){
+                     meilleurCoup.push_back({x,y}); // on ajoute à la liste des similaires 
+                }
+                alpha = std::max(alpha,meilleurScore); // maj de alpha pour optimiser
             }
         }
     }
-    return meilleurCoup;
+
+  //On tire un coup au sort parmi tous ceux qui ont obtenu le meilleur score
+    if (!meilleurCoup.empty()) {
+        int indexAleatoire = rand() % meilleurCoup.size();
+        return meilleurCoup[indexAleatoire];
+    }
+
+    return {0, 0}; // au cas où le plateau est plein
 }
+

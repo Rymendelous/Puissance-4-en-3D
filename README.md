@@ -29,9 +29,9 @@ La documentation des classes est disponible dans l’onglet **Classes**.
 
 Projet de Puissance 4 pour le TT de Génie Logiciel, MAM 2025-2026
 
-| Poste | Responsable |
-|------|------------|
-| Responsable gestion | ZERZOUH Rym |
-| Responsable tests | HORDOIR Léontine |
-| Responsable documentation | MANCEAU Emilien |
-| Responsable rapport | LE CORRE Nancy |
+| Poste | Responsable|
+| -- |-- |
+|Responsable gestion/ répartition écriture , déroulé| [ZERZOUH Rym](https://forge.univ-lyon1.fr/p2201467)|
+| Responsable élabaration tests, validation es codes... | [HORDOIR Léontine](https://forge.univ-lyon1.fr/p2415473) |
+| Responsable documentation, élaboration de la charte d'écriture | [MANCEAU Emilien](https://forge.univ-lyon1.fr/p2409792) |
+|Responsable rapport latex, gestion des commits | [LE CORRE Nancy](https://forge.univ-lyon1.fr/p2515760) |
