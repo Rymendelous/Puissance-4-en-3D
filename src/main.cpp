@@ -10,6 +10,14 @@
 #include "JoueurMPI.h" 
 #include "position.h"
 
+/**
+ * @file main.cpp
+ * @brief Programme principal utilisant MPI.
+ *
+ * Ce fichier lance une partie entre deux IA MinMax
+ * qui communiquent avec un arbitre grâce à MPI.
+ */
+
 using namespace std;
 
 // Convertit les coordonnées (x, y) vers la classe position 
