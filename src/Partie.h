@@ -66,7 +66,18 @@ public:
      * jusqu'à ce qu'un joueur gagne ou que la partie se termine.
      */
     void lancer();
+
+    /**
+     * @brief Lance une partie sans affichage détaillé.
+     * @param j1commence Indique si le joueur 1 commence.
+     * @return Pointeur vers le joueur gagnant, ou nullptr en cas de match nul.
+     */
     Joueur* lancer_silencieux(bool j1commence);
+
+    /**
+     * @brief Retourne le plateau de la partie.
+     * @return Référence constante vers le plateau.
+     */
     const Plateau3D& getPlateau() const{
         return this->plateau;
         }
