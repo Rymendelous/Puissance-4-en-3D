@@ -8,17 +8,28 @@ Ce projet est un jeu de Puissance 4 en C++.
 
 ## Classes du projet
 
-Cette documentation contient l’ensemble des classes du projet.
+Cette documentation contient l’ensemble des classes et structures du projet.
 
-- arbitre
-- IA_MinMax
-- Joueur
+### Gestion des joueurs
+
+- Joueur 
 - JoueurHumain
+- JoueurIA
+- IA_Aleatoire
+- IA_MinMax
 - JoueurMPI
+
+### Gestion du jeu
+
 - Partie
 - Plateau3D
+- arbitre
 - position
+
+### Structures et types
+
 - Vec3
+- Pion
 
 ## Lancement
 
