@@ -14,6 +14,11 @@
 #include "joueur.h"
 using namespace std;
  
+/**
+ * @file TestJeu.cpp
+ * @brief Ancien fichier de test pour les communications MPI.
+ */
+ 
 int main(int argc, char *argv[]) {
 	int n, rank, size, i;
 	bool joue=true;
