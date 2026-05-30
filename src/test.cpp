@@ -9,6 +9,14 @@
 #include "Partie.h"
 #include "IA_MinMax.h"
 
+/**
+ * @file test.cpp
+ * @brief Fichier de test pour comparer les IA.
+ *
+ * Ce fichier permet de lancer plusieurs parties automatiquement
+ * afin de comparer les performances des différentes IA.
+ */
+ 
 using namespace std;
 
 void visualiserLignes(const Plateau3D& plateau) {
