@@ -1,0 +1,7 @@
+<map id="Partie::lancer_silencieux" name="Partie::lancer_silencieux">
+<area shape="rect" id="Node000001" title="Lance une partie sans affichage détaillé." alt="" coords="5,31,169,57"/>
+<area shape="rect" id="Node000002" href="$class_joueur.html#adce372ce3fe11f9aaa4646ff76e3b917" title="Demande au joueur de choisir un coup." alt="" coords="217,5,354,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,31,204,29,199,30,170,36"/>
+<area shape="rect" id="Node000003" href="$class_joueur.html#a1213cdf4783d3ec18a5f86a08b830522" title="Retourne la couleur du joueur." alt="" coords="220,56,351,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,52,207,59,202,59,169,57"/>
+</map>

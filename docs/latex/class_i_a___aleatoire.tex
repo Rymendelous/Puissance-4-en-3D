@@ -1,0 +1,232 @@
+\doxysection{Référence de la classe IA\+\_\+\+Aleatoire}
+\hypertarget{class_i_a___aleatoire}{}\label{class_i_a___aleatoire}\index{IA\_Aleatoire@{IA\_Aleatoire}}
+
+
+Intelligence artificielle qui choisit ses coups aléatoirement.  
+
+
+
+
+{\ttfamily \#include $<$IA\+\_\+\+Aleatoire.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de IA\+\_\+\+Aleatoire\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_i_a___aleatoire__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de IA\+\_\+\+Aleatoire\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_i_a___aleatoire__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_a___aleatoire_ae2ac25a8374a6c8f2d93bd82301ff5e9}{IA\+\_\+\+Aleatoire}} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___aleatoire_a924d517d9e1618f248e09b0d88cdaf8d}{IA\+\_\+\+Aleatoire}} (string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec nom et couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___aleatoire_a24a83b09eeb1c4cbfb26ca1d6cfcb6c3}{IA\+\_\+\+Aleatoire}} (const \mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_a___aleatoire_a62841b712f217476f31d1a8c4b83e6e3}\label{class_i_a___aleatoire_a62841b712f217476f31d1a8c4b83e6e3} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+IA\+\_\+\+Aleatoire} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \& \mbox{\hyperlink{class_i_a___aleatoire_a11235eb8526aae33b35bda658654a39f}{operator=}} (const \mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_i_a___aleatoire_a9016158ef8da47a6c9c4e4ab4453a1cc}{choisir\+Coup}} (const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&plateau)
+\begin{DoxyCompactList}\small\item\em Choisit un coup valide au hasard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_joueur_i_a_aa474f7fcabf500780c4f0a8f14ba88ae}{Joueur\+IA}} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a_a87e3af2ac1aac754e612b7250c47daa8}{Joueur\+IA}} (string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec nom et couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a_ae3b8581e5ed6506b594cd9e73c33362e}{Joueur\+IA}} (const \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Joueur\+IA} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \& \mbox{\hyperlink{class_joueur_i_a_a454d23bbe2a080d68769dd6097176222}{operator=}} (const \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_joueur}{Joueur}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Joueur} (std\+::string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+{\bfseries Joueur} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+{\bfseries Joueur} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+\mbox{\hyperlink{class_joueur}{Joueur}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+std\+::string \mbox{\hyperlink{class_joueur_a04eaeeda184cfba380d5210bc035a8ed}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nom du joueur. \end{DoxyCompactList}\item 
+Pion \mbox{\hyperlink{class_joueur_a1213cdf4783d3ec18a5f86a08b830522}{get\+Couleur}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la couleur du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_a___aleatoire_a3a343d2e5a1b50295ae89615673af640}\label{class_i_a___aleatoire_a3a343d2e5a1b50295ae89615673af640} 
+mt19937 {\bfseries moteur}
+\begin{DoxyCompactList}\small\item\em Générateur de nombres aléatoires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_joueur}{Joueur}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries nom}
+\begin{DoxyCompactList}\small\item\em Nom du joueur. \end{DoxyCompactList}\item 
+Pion {\bfseries couleur}
+\begin{DoxyCompactList}\small\item\em Couleur du pion du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Intelligence artificielle qui choisit ses coups aléatoirement. 
+
+Cette classe parcourt les coups possibles sur le plateau, puis en sélectionne un au hasard. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_i_a___aleatoire_ae2ac25a8374a6c8f2d93bd82301ff5e9}\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\doxysubsubsection{\texorpdfstring{IA\_Aleatoire()}{IA\_Aleatoire()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_i_a___aleatoire_ae2ac25a8374a6c8f2d93bd82301ff5e9} 
+IA\+\_\+\+Aleatoire\+::\+IA\+\_\+\+Aleatoire (\begin{DoxyParamCaption}\item[{Pion}]{couleur}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur} & Couleur du pion de l\textquotesingle{}IA. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_i_a___aleatoire_ae2ac25a8374a6c8f2d93bd82301ff5e9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___aleatoire_a924d517d9e1618f248e09b0d88cdaf8d}\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\doxysubsubsection{\texorpdfstring{IA\_Aleatoire()}{IA\_Aleatoire()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_i_a___aleatoire_a924d517d9e1618f248e09b0d88cdaf8d} 
+IA\+\_\+\+Aleatoire\+::\+IA\+\_\+\+Aleatoire (\begin{DoxyParamCaption}\item[{string}]{nom}{, }\item[{Pion}]{couleur}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec nom et couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom} & Nom de l\textquotesingle{}IA. \\
+\hline
+{\em couleur} & Couleur du pion de l\textquotesingle{}IA. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_i_a___aleatoire_a924d517d9e1618f248e09b0d88cdaf8d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___aleatoire_a24a83b09eeb1c4cbfb26ca1d6cfcb6c3}\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\index{IA\_Aleatoire@{IA\_Aleatoire}!IA\_Aleatoire@{IA\_Aleatoire}}
+\doxysubsubsection{\texorpdfstring{IA\_Aleatoire()}{IA\_Aleatoire()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_i_a___aleatoire_a24a83b09eeb1c4cbfb26ca1d6cfcb6c3} 
+IA\+\_\+\+Aleatoire\+::\+IA\+\_\+\+Aleatoire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire} à copier. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___aleatoire_a24a83b09eeb1c4cbfb26ca1d6cfcb6c3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_i_a___aleatoire_a9016158ef8da47a6c9c4e4ab4453a1cc}\index{IA\_Aleatoire@{IA\_Aleatoire}!choisirCoup@{choisirCoup}}
+\index{choisirCoup@{choisirCoup}!IA\_Aleatoire@{IA\_Aleatoire}}
+\doxysubsubsection{\texorpdfstring{choisirCoup()}{choisirCoup()}}
+{\footnotesize\ttfamily \label{class_i_a___aleatoire_a9016158ef8da47a6c9c4e4ab4453a1cc} 
+std\+::pair$<$ int, int $>$ IA\+\_\+\+Aleatoire\+::choisir\+Coup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&}]{plateau}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Choisit un coup valide au hasard. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Paire d\textquotesingle{}entiers représentant le coup choisi. 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917}{Joueur}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___aleatoire_a9016158ef8da47a6c9c4e4ab4453a1cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___aleatoire_a11235eb8526aae33b35bda658654a39f}\index{IA\_Aleatoire@{IA\_Aleatoire}!operator=@{operator=}}
+\index{operator=@{operator=}!IA\_Aleatoire@{IA\_Aleatoire}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_i_a___aleatoire_a11235eb8526aae33b35bda658654a39f} 
+\mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \& IA\+\_\+\+Aleatoire\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Opérateur d\textquotesingle{}affectation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_i_a___aleatoire}{IA\+\_\+\+Aleatoire} à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Référence vers l\textquotesingle{}IA courante. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___aleatoire_a11235eb8526aae33b35bda658654a39f_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/IA\+\_\+\+Aleatoire.\+h\item 
+src/IA\+\_\+\+Aleatoire.\+cpp\end{DoxyCompactItemize}

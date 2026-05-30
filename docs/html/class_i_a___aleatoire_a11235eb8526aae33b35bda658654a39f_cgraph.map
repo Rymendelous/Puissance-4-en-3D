@@ -1,0 +1,10 @@
+<map id="IA_Aleatoire::operator=" name="IA_Aleatoire::operator=">
+<area shape="rect" id="Node000001" title="Opérateur d&#39;affectation." alt="" coords="5,31,161,57"/>
+<area shape="rect" id="Node000002" href="$class_i_a___aleatoire.html#ae2ac25a8374a6c8f2d93bd82301ff5e9" title="Constructeur avec couleur." alt="" coords="209,5,380,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,32,195,30,190,31,161,37"/>
+<area shape="rect" id="Node000004" href="$class_joueur_i_a.html#a454d23bbe2a080d68769dd6097176222" title="Opérateur d&#39;affectation." alt="" coords="226,56,362,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,51,214,59,208,60,161,56"/>
+<area shape="rect" id="Node000003" href="$class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae" title="Constructeur avec couleur." alt="" coords="428,31,561,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,27,415,34,410,34,381,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="363,58,410,55,415,54,363,63"/>
+</map>

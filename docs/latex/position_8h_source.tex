@@ -1,0 +1,50 @@
+\doxysection{position.\+h}
+\hypertarget{position_8h_source}{}\label{position_8h_source}\index{src/position.h@{src/position.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ position.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 6\ avr.\ 2026}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ dtromeur}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ POSITION\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ POSITION\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }position\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ m;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ vector<char>\ alpha;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ h;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \ v;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \ l;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ position(\textcolor{keywordtype}{char}\ h\ =\textcolor{charliteral}{'A'},\ \textcolor{keywordtype}{int}\ v\ =0,\ \textcolor{keywordtype}{int}\ l\ =0);}
+\DoxyCodeLine{00025\ \ \ \ \ position(\textcolor{keyword}{const}\ position\ \&o);}
+\DoxyCodeLine{00026\ \ \ \ \ position\&\ operator=(\textcolor{keyword}{const}\ position\ \&o);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~position();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ position\ NumPosition(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}\ geth();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ getv();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ getl();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{char}\ getalpha(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ seth(\textcolor{keywordtype}{char}\ A);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setv(\textcolor{keywordtype}{int}\ v);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ affiche();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ positionNumMPI();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\ \&\ operator<<(ostream\ \&\ ,\ position\ p);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ POSITION\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

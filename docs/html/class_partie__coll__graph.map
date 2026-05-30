@@ -1,0 +1,7 @@
+<map id="Partie" name="Partie">
+<area shape="rect" id="Node000001" title="Gère le déroulement d&#39;une partie de Puissance 4." alt="" coords="56,112,111,139"/>
+<area shape="rect" id="Node000002" href="$class_joueur.html" title="Classe abstraite représentant un joueur." alt="" coords="5,5,66,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,44,80,111,75,112,46,48"/>
+<area shape="rect" id="Node000003" href="$class_plateau3_d.html" title="Représente le plateau de jeu du Puissance 4 en 3D." alt="" coords="90,5,173,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,45,91,113,87,110,117,47"/>
+</map>

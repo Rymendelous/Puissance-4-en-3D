@@ -1,0 +1,329 @@
+\doxysection{Référence de la classe IA\+\_\+\+Min\+Max}
+\hypertarget{class_i_a___min_max}{}\label{class_i_a___min_max}\index{IA\_MinMax@{IA\_MinMax}}
+
+
+Intelligence artificielle utilisant l\textquotesingle{}algorithme Min\+Max.  
+
+
+
+
+{\ttfamily \#include $<$IA\+\_\+\+Min\+Max.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de IA\+\_\+\+Min\+Max\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_i_a___min_max__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de IA\+\_\+\+Min\+Max\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_i_a___min_max__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\+\_\+\+Min\+Max}} (std\+::string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}}, int Profondeur\+Entree)
+\begin{DoxyCompactList}\small\item\em Constructeur avec nom, couleur et profondeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84}{IA\+\_\+\+Min\+Max}} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175}{IA\+\_\+\+Min\+Max}} (const \mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_a___min_max_acf713533b7168794491a8b97e57ed325}\label{class_i_a___min_max_acf713533b7168794491a8b97e57ed325} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+IA\+\_\+\+Min\+Max} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \& \mbox{\hyperlink{class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92}{operator=}} (const \mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_i_a___min_max_acf127760115412522145b647af0ef5df}{choisir\+Coup}} (const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&plateau)
+\begin{DoxyCompactList}\small\item\em Choisit le meilleur coup selon l\textquotesingle{}algorithme Min\+Max. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde}{evaluer\+Plateau}} (const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&plateau)
+\begin{DoxyCompactList}\small\item\em Évalue l\textquotesingle{}état global du plateau. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_a___min_max_a6e55ab9de411af944218989ec5ed4282}{evaluer}} (int nbr\+Pions, int Pions\+\_\+adverse) const
+\begin{DoxyCompactList}\small\item\em Évalue une ligne de quatre cases. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74}{min\+\_\+max}} (\mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&plateau, int \mbox{\hyperlink{class_i_a___min_max_abb051aaacca15bed01c02bb5f0471083}{profondeur}}, int alpha, int beta, bool est\+Max)
+\begin{DoxyCompactList}\small\item\em Applique l\textquotesingle{}algorithme Min\+Max avec élagage alpha-\/bêta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_joueur_i_a_aa474f7fcabf500780c4f0a8f14ba88ae}{Joueur\+IA}} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a_a87e3af2ac1aac754e612b7250c47daa8}{Joueur\+IA}} (string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec nom et couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a_ae3b8581e5ed6506b594cd9e73c33362e}{Joueur\+IA}} (const \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Joueur\+IA} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \& \mbox{\hyperlink{class_joueur_i_a_a454d23bbe2a080d68769dd6097176222}{operator=}} (const \mbox{\hyperlink{class_joueur_i_a}{Joueur\+IA}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_joueur}{Joueur}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Joueur} (std\+::string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+{\bfseries Joueur} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+{\bfseries Joueur} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+\mbox{\hyperlink{class_joueur}{Joueur}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+std\+::string \mbox{\hyperlink{class_joueur_a04eaeeda184cfba380d5210bc035a8ed}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nom du joueur. \end{DoxyCompactList}\item 
+Pion \mbox{\hyperlink{class_joueur_a1213cdf4783d3ec18a5f86a08b830522}{get\+Couleur}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la couleur du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_a___min_max_abb051aaacca15bed01c02bb5f0471083}\label{class_i_a___min_max_abb051aaacca15bed01c02bb5f0471083} 
+int {\bfseries profondeur}
+\begin{DoxyCompactList}\small\item\em Profondeur de recherche de l\textquotesingle{}algorithme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_joueur}{Joueur}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries nom}
+\begin{DoxyCompactList}\small\item\em Nom du joueur. \end{DoxyCompactList}\item 
+Pion {\bfseries couleur}
+\begin{DoxyCompactList}\small\item\em Couleur du pion du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_a___min_max_a217031dd536043f457cceb1912244de4}\label{class_i_a___min_max_a217031dd536043f457cceb1912244de4} 
+static constexpr int {\bfseries ordreX} \mbox{[}$\,$\mbox{]} = \{2, 1, 3, 0, 4\}
+\item 
+\Hypertarget{class_i_a___min_max_ad94d41cf6de339bdc3d1e366bc0146f0}\label{class_i_a___min_max_ad94d41cf6de339bdc3d1e366bc0146f0} 
+static constexpr int {\bfseries ordreY} \mbox{[}$\,$\mbox{]} = \{1, 2, 0, 3\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Intelligence artificielle utilisant l\textquotesingle{}algorithme Min\+Max. 
+
+Cette IA évalue les coups possibles sur le plateau afin de choisir le coup ayant le meilleur score. Elle utilise aussi l\textquotesingle{}élagage alpha-\/bêta pour limiter le nombre de situations à explorer. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{IA\_MinMax()}{IA\_MinMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1} 
+IA\+\_\+\+Min\+Max\+::\+IA\+\_\+\+Min\+Max (\begin{DoxyParamCaption}\item[{std\+::string}]{nom}{, }\item[{Pion}]{couleur}{, }\item[{int}]{Profondeur\+Entree}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec nom, couleur et profondeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom} & Nom de l\textquotesingle{}IA. \\
+\hline
+{\em couleur} & Couleur du pion de l\textquotesingle{}IA. \\
+\hline
+{\em Profondeur\+Entree} & Profondeur de recherche de l\textquotesingle{}algorithme. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84}\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{IA\_MinMax()}{IA\_MinMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84} 
+IA\+\_\+\+Min\+Max\+::\+IA\+\_\+\+Min\+Max (\begin{DoxyParamCaption}\item[{Pion}]{couleur}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur} & Couleur du pion de l\textquotesingle{}IA. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175}\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\index{IA\_MinMax@{IA\_MinMax}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{IA\_MinMax()}{IA\_MinMax()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175} 
+IA\+\_\+\+Min\+Max\+::\+IA\+\_\+\+Min\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_i_a___min_max}{IA\+\_\+\+Min\+Max} à copier. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_i_a___min_max_acf127760115412522145b647af0ef5df}\index{IA\_MinMax@{IA\_MinMax}!choisirCoup@{choisirCoup}}
+\index{choisirCoup@{choisirCoup}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{choisirCoup()}{choisirCoup()}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_acf127760115412522145b647af0ef5df} 
+std\+::pair$<$ int, int $>$ IA\+\_\+\+Min\+Max\+::choisir\+Coup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&}]{plateau}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Choisit le meilleur coup selon l\textquotesingle{}algorithme Min\+Max. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Paire d\textquotesingle{}entiers représentant le coup choisi. 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917}{Joueur}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___min_max_acf127760115412522145b647af0ef5df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___min_max_a6e55ab9de411af944218989ec5ed4282}\index{IA\_MinMax@{IA\_MinMax}!evaluer@{evaluer}}
+\index{evaluer@{evaluer}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{evaluer()}{evaluer()}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a6e55ab9de411af944218989ec5ed4282} 
+int IA\+\_\+\+Min\+Max\+::evaluer (\begin{DoxyParamCaption}\item[{int}]{nbr\+Pions}{, }\item[{int}]{Pions\+\_\+adverse}{}\end{DoxyParamCaption}) const}
+
+
+
+Évalue une ligne de quatre cases. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nbr\+Pions} & Nombre de pions de l\textquotesingle{}IA. \\
+\hline
+{\em Pions\+\_\+adverse} & Nombre de pions adverses. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Score de la ligne. 
+\end{DoxyReturn}
+\Hypertarget{class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde}\index{IA\_MinMax@{IA\_MinMax}!evaluerPlateau@{evaluerPlateau}}
+\index{evaluerPlateau@{evaluerPlateau}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{evaluerPlateau()}{evaluerPlateau()}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde} 
+int IA\+\_\+\+Min\+Max\+::evaluer\+Plateau (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&}]{plateau}{}\end{DoxyParamCaption})}
+
+
+
+Évalue l\textquotesingle{}état global du plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau à évaluer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Score associé au plateau. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74}\index{IA\_MinMax@{IA\_MinMax}!min\_max@{min\_max}}
+\index{min\_max@{min\_max}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{min\_max()}{min\_max()}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74} 
+int IA\+\_\+\+Min\+Max\+::min\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&}]{plateau}{, }\item[{int}]{profondeur}{, }\item[{int}]{alpha}{, }\item[{int}]{beta}{, }\item[{bool}]{est\+Max}{}\end{DoxyParamCaption})}
+
+
+
+Applique l\textquotesingle{}algorithme Min\+Max avec élagage alpha-\/bêta. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau simulé. \\
+\hline
+{\em profondeur} & Profondeur restante. \\
+\hline
+{\em alpha} & Meilleur score déjà trouvé pour le joueur maximisant. \\
+\hline
+{\em beta} & Meilleur score déjà trouvé pour le joueur minimisant. \\
+\hline
+{\em est\+Max} & Indique si le tour simulé est celui de l\textquotesingle{}IA. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Score du meilleur coup trouvé. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92}\index{IA\_MinMax@{IA\_MinMax}!operator=@{operator=}}
+\index{operator=@{operator=}!IA\_MinMax@{IA\_MinMax}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92} 
+\mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \& IA\+\_\+\+Min\+Max\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_i_a___min_max}{IA\+\_\+\+Min\+Max}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Opérateur d\textquotesingle{}affectation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_i_a___min_max}{IA\+\_\+\+Min\+Max} à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Référence vers l\textquotesingle{}IA courante. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/IA\+\_\+\+Min\+Max.\+h\item 
+src/IA\+\_\+\+Min\+Max.\+cpp\end{DoxyCompactItemize}

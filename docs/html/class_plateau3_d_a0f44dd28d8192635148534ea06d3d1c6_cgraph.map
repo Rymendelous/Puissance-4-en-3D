@@ -1,0 +1,12 @@
+<map id="Plateau3D::ajouter_pion" name="Plateau3D::ajouter_pion">
+<area shape="rect" id="Node000001" title="Ajoute un pion sur le plateau." alt="" coords="5,101,166,128"/>
+<area shape="rect" id="Node000002" href="$class_plateau3_d.html#aaa4aaa2b4fc4ba5342545c50582727f5" title="Vérifie si un coup est valide. *." alt="" coords="214,5,357,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,98,223,53,220,57,119,103"/>
+<area shape="rect" id="Node000003" href="$class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="405,43,544,69"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="165,100,391,66,389,71,167,105"/>
+<area shape="rect" id="Node000004" href="$class_plateau3_d.html#aa66da86ffc57a0be55d1ffc9849b6511" title=" " alt="" coords="215,123,356,165"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="166,124,202,131,197,132,166,129"/>
+<area shape="rect" id="Node000005" href="$class_plateau3_d.html#a7f5584e140ec72285791db2cb5430f6f" title="Vérifie si un joueur a gagné. *." alt="" coords="221,189,350,232"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="115,126,215,175,226,182,221,182,212,180,114,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,35,392,42,387,43,358,40"/>
+</map>

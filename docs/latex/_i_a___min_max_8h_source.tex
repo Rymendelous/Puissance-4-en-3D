@@ -1,0 +1,44 @@
+\doxysection{IA\+\_\+\+Min\+Max.\+h}
+\hypertarget{_i_a___min_max_8h_source}{}\label{_i_a___min_max_8h_source}\index{src/IA\_MinMax.h@{src/IA\_MinMax.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ IA\_MINMAX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ IA\_MINMAX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Pion.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}JoueurIA.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_joueur_i_a_aa474f7fcabf500780c4f0a8f14ba88ae}{JoueurIA}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}(std::string\ \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}},\ Pion\ \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}},\textcolor{keywordtype}{int}\ ProfondeurEntree);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}(\ Pion\ \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}\ \&\ other);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_i_a___min_max_acf713533b7168794491a8b97e57ed325}{\string~IA\_MinMax}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}\ \&\ \mbox{\hyperlink{class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92}{operator=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1}{IA\_MinMax}}\ \&\ other);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{class_i_a___min_max_acf127760115412522145b647af0ef5df}{choisirCoup}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_plateau3_d}{Plateau3D}}\&\ plateau);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde}{evaluerPlateau}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_plateau3_d}{Plateau3D}}\&\ plateau);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_a___min_max_a6e55ab9de411af944218989ec5ed4282}{evaluer}}(\textcolor{keywordtype}{int}\ nbrPions,\textcolor{keywordtype}{int}\ Pions\_adverse)\textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74}{min\_max}}(\mbox{\hyperlink{class_plateau3_d}{Plateau3D}}\&\ plateau,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_a___min_max_abb051aaacca15bed01c02bb5f0471083}{profondeur}},\textcolor{keywordtype}{int}\ alpha,\ \textcolor{keywordtype}{int}\ beta,\ \textcolor{keywordtype}{bool}\ estMax);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00086\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ ordreX[]\ =\ \{2,\ 1,\ 3,\ 0,\ 4\};\ \textcolor{comment}{//\ je\ priorise\ les\ lignes\ aux\ centre\ et\ je\ met\ dans\ une\ liste\ à\ la\ main}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ ordreY[]\ =\ \{1,\ 2,\ 0,\ 3\};\ \ \ \ \textcolor{comment}{//\ je\ priorise\ les\ colonnes\ au\ centre\ et\ je\ met\ dans\ une\ liste\ à\ la\ main}}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_a___min_max_abb051aaacca15bed01c02bb5f0471083}{profondeur}};\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

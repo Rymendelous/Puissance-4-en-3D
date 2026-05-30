@@ -1,0 +1,78 @@
+\doxysection{Plateau3\+D.\+h}
+\hypertarget{_plateau3_d_8h_source}{}\label{_plateau3_d_8h_source}\index{src/Plateau3D.h@{src/Plateau3D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLATEAU3D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLATEAU3D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Pion.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vec3}{Vec3}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vec3_adc48a2377fd8b989962668c15966f9cc}{dx}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vec3_ae7dce2a28504a7c6986b4e9b6d313568}{dy}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vec3_a95ca70d596dab035888bf5e64fc0053a}{dz}};\ }
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_plateau3_d_a76611190e0e711c4eb386189f1e32c5a}{\string~Plateau3D}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}\ \&other);}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}\&\ \mbox{\hyperlink{class_plateau3_d_a28de7c02744ee5a866b3faf96b51c5d1}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_plateau3_d_aff4e68c3f82c7f3864fef06b8a77c233}{Plateau3D}}\ \&other);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_plateau3_d_aaa4aaa2b4fc4ba5342545c50582727f5}{est\_coup\_valide}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau3_d_a0f44dd28d8192635148534ea06d3d1c6}{ajouter\_pion}}(\textcolor{keywordtype}{int}\ longueur,\ \textcolor{keywordtype}{int}\ largeur,\ Pion\ p);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau3_d_a14e5c4fc0b4dbb27967bcfaea9b05036}{retirer\_pion}}(\textcolor{keywordtype}{int}\ longueur,\ \textcolor{keywordtype}{int}\ largeur);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau3_d_adf8cdefefea63194309e788a0570a08c}{affiche}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_plateau3_d_a7f5584e140ec72285791db2cb5430f6f}{verifier\_victoire}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ z,\ Pion\ p)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau3_d_ab5d1c22de637e3adc4c3555ba8bdce90}{get\_largeur}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau3_d_a3ac36adf7698567542599218a7ddb938}{get\_longueur}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau3_d_aa66da86ffc57a0be55d1ffc9849b6511}{get\_total\_emplacements}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{class_plateau3_d_ab3701fe1c7bbf8a7eaae072c0f095583}{lignes\_possibles}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ Pion\ \mbox{\hyperlink{class_plateau3_d_ae8cdfb02c55177a51f3eb57870ca6bb9}{get\_pion}}(\textcolor{keywordtype}{int}\ hauteur,\ \textcolor{keywordtype}{int}\ largeur,\ \textcolor{keywordtype}{int}\ longueur)\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00073\ \ \ \ \ Pion\ \mbox{\hyperlink{class_plateau3_d_ae8cdfb02c55177a51f3eb57870ca6bb9}{get\_pion}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_plateau3_d_addfbd0793d93c7ae2c2d240dc5c10617}{est\_termine}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ hauteur\ =\ 4;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ largeur\ =\ 4;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ longueur\ =\ 5;}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ std::array<Pion,\ hauteur\ *\ largeur\ *\ longueur>\ \ \ \ \ \ grille;\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ plateau\_termine;\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ nbr\_pions\_places;\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{struct_vec3}{Vec3}}\ directions[]\ =\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{1,0,0\},\ \{0,1,0\},\ \{0,0,1\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Axes}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{1,1,0\},\ \{1,-\/1,0\},\ \{1,0,1\},\ \{1,0,-\/1\},\ \{0,1,1\},\ \{0,1,-\/1\},\ \textcolor{comment}{//\ Diagonales\ faces}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{1,1,1\},\ \{1,1,-\/1\},\ \{1,-\/1,1\},\ \{1,-\/1,-\/1\}\ \ \ \ \textcolor{comment}{//\ Diagonales\ spatiales}}
+\DoxyCodeLine{00092\ \ \ \ \ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::vector<std::vector<int>>\ LIGNES\_POSSIBLES;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ initialiser\_lignes();}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ index(\textcolor{keywordtype}{int}\ longueur,\ \textcolor{keywordtype}{int}\ largeur,\ \textcolor{keywordtype}{int}\ hauteur)\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ def\_pion(\textcolor{keywordtype}{int}\ hauteur,\ \textcolor{keywordtype}{int}\ largeur,\ \textcolor{keywordtype}{int}\ longueur,\ Pion\ p);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ compter\_pions\_direction(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy,\ \textcolor{keywordtype}{int}\ dz,\ Pion\ p)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

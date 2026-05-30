@@ -1,0 +1,5 @@
+<map id="JoueurIA" name="JoueurIA">
+<area shape="rect" id="Node000001" title="Représente un joueur contrôlé par une intelligence artificielle." alt="" coords="5,80,79,107"/>
+<area shape="rect" id="Node000002" href="$class_joueur.html" title="Classe abstraite représentant un joueur." alt="" coords="12,5,72,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,46,45,80,39,79,40,50"/>
+</map>

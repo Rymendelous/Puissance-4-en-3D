@@ -1,0 +1,113 @@
+\doxysection{Référence de la classe Joueur}
+\hypertarget{class_joueur}{}\label{class_joueur}\index{Joueur@{Joueur}}
+
+
+Classe abstraite représentant un joueur.  
+
+
+
+
+{\ttfamily \#include $<$Joueur.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Joueur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_joueur__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_joueur_a921b7f8dcb1389d7fdadf5eb2cd1e0fd}\label{class_joueur_a921b7f8dcb1389d7fdadf5eb2cd1e0fd} 
+{\bfseries Joueur} (std\+::string \mbox{\hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}}, Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+\Hypertarget{class_joueur_a42d53e9b702cdf3a362c9d6dd799722d}\label{class_joueur_a42d53e9b702cdf3a362c9d6dd799722d} 
+{\bfseries Joueur} (Pion \mbox{\hyperlink{class_joueur_a674981c6797dbf817149322f9f071c48}{couleur}})
+\item 
+\Hypertarget{class_joueur_a5f96efd372cb06fd2c88565e2ef88fca}\label{class_joueur_a5f96efd372cb06fd2c88565e2ef88fca} 
+{\bfseries Joueur} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+\Hypertarget{class_joueur_a5612ac5e4d8831700e7c1636dd4eda1e}\label{class_joueur_a5612ac5e4d8831700e7c1636dd4eda1e} 
+\mbox{\hyperlink{class_joueur}{Joueur}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_joueur}{Joueur}} \&other)
+\item 
+virtual std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917}{choisir\+Coup}} (const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&plateau)=0
+\begin{DoxyCompactList}\small\item\em Demande au joueur de choisir un coup. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_joueur_a04eaeeda184cfba380d5210bc035a8ed}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nom du joueur. \end{DoxyCompactList}\item 
+Pion \mbox{\hyperlink{class_joueur_a1213cdf4783d3ec18a5f86a08b830522}{get\+Couleur}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la couleur du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_joueur_abaee0b4f259181bf66dbab54bef971bb}\label{class_joueur_abaee0b4f259181bf66dbab54bef971bb} 
+std\+::string {\bfseries nom}
+\begin{DoxyCompactList}\small\item\em Nom du joueur. \end{DoxyCompactList}\item 
+\Hypertarget{class_joueur_a674981c6797dbf817149322f9f071c48}\label{class_joueur_a674981c6797dbf817149322f9f071c48} 
+Pion {\bfseries couleur}
+\begin{DoxyCompactList}\small\item\em Couleur du pion du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe abstraite représentant un joueur. 
+
+Cette classe contient les informations communes à tous les joueurs, comme le nom et la couleur du pion. Elle impose aussi la méthode \doxylink{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917}{choisir\+Coup()}, qui sera redéfinie par les classes filles. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917}\index{Joueur@{Joueur}!choisirCoup@{choisirCoup}}
+\index{choisirCoup@{choisirCoup}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{choisirCoup()}{choisirCoup()}}
+{\footnotesize\ttfamily \label{class_joueur_adce372ce3fe11f9aaa4646ff76e3b917} 
+virtual std\+::pair$<$ int, int $>$ Joueur\+::choisir\+Coup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \&}]{plateau}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Demande au joueur de choisir un coup. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Paire d\textquotesingle{}entiers représentant le coup choisi. 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_i_a___aleatoire_a9016158ef8da47a6c9c4e4ab4453a1cc}{IA\+\_\+\+Aleatoire}}, \mbox{\hyperlink{class_i_a___min_max_acf127760115412522145b647af0ef5df}{IA\+\_\+\+Min\+Max}}, et \mbox{\hyperlink{class_joueur_humain_ab9e184454e3c701b03b7b55a57306ad6}{Joueur\+Humain}}.
+
+\Hypertarget{class_joueur_a1213cdf4783d3ec18a5f86a08b830522}\index{Joueur@{Joueur}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily \label{class_joueur_a1213cdf4783d3ec18a5f86a08b830522} 
+Pion Joueur\+::get\+Couleur (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne la couleur du joueur. 
+
+\begin{DoxyReturn}{Renvoie}
+Couleur du pion du joueur. 
+\end{DoxyReturn}
+\Hypertarget{class_joueur_a04eaeeda184cfba380d5210bc035a8ed}\index{Joueur@{Joueur}!getNom@{getNom}}
+\index{getNom@{getNom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily \label{class_joueur_a04eaeeda184cfba380d5210bc035a8ed} 
+std\+::string Joueur\+::get\+Nom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nom du joueur. 
+
+\begin{DoxyReturn}{Renvoie}
+Nom du joueur. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/Joueur.\+h\item 
+src/Joueur.\+cpp\end{DoxyCompactItemize}

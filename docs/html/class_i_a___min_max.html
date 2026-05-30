@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence de la classe IA_MinMax</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_i_a___min_max.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pro-attribs">Attributs protégés</a> &#124;
+<a href="#pro-static-attribs">Attributs protégés statiques</a> &#124;
+<a href="class_i_a___min_max-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la classe IA_MinMax</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Intelligence artificielle utilisant l'algorithme MinMax.  
+ <a href="#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_a___min_max_8h_source.html">IA_MinMax.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de IA_MinMax:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max__inherit__graph.png" border="0" usemap="#a_i_a___min_max_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_a___min_max_inherit__map" id="a_i_a___min_max_inherit__map">
+<area shape="rect" title="Intelligence artificielle utilisant l&#39;algorithme MinMax." alt="" coords="5,155,93,181"/>
+<area shape="rect" href="class_joueur_i_a.html" title="Représente un joueur contrôlé par une intelligence artificielle." alt="" coords="12,80,86,107"/>
+<area shape="poly" title=" " alt="" coords="51,121,52,155,46,154,47,124"/>
+<area shape="rect" href="class_joueur.html" title="Classe abstraite représentant un joueur." alt="" coords="19,5,79,32"/>
+<area shape="poly" title=" " alt="" coords="50,45,52,80,46,79,48,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de IA_MinMax:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max__coll__graph.png" border="0" usemap="#a_i_a___min_max_coll__map" alt="Collaboration graph"/></div>
+<map name="a_i_a___min_max_coll__map" id="a_i_a___min_max_coll__map">
+<area shape="rect" title="Intelligence artificielle utilisant l&#39;algorithme MinMax." alt="" coords="5,155,93,181"/>
+<area shape="rect" href="class_joueur_i_a.html" title="Représente un joueur contrôlé par une intelligence artificielle." alt="" coords="12,80,86,107"/>
+<area shape="poly" title=" " alt="" coords="51,121,52,155,46,154,47,124"/>
+<area shape="rect" href="class_joueur.html" title="Classe abstraite représentant un joueur." alt="" coords="19,5,79,32"/>
+<area shape="poly" title=" " alt="" coords="50,45,52,80,46,79,48,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a350b220b2dbaa4ece7fb35addfc9a0d1" id="r_a350b220b2dbaa4ece7fb35addfc9a0d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350b220b2dbaa4ece7fb35addfc9a0d1">IA_MinMax</a> (std::string <a class="el" href="class_joueur.html#abaee0b4f259181bf66dbab54bef971bb">nom</a>, Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>, int ProfondeurEntree)</td></tr>
+<tr class="memdesc:a350b220b2dbaa4ece7fb35addfc9a0d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec nom, couleur et profondeur.  <br /></td></tr>
+<tr class="separator:a350b220b2dbaa4ece7fb35addfc9a0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e127d8510d80f6486c11e1d7cf7b84" id="r_ae4e127d8510d80f6486c11e1d7cf7b84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e127d8510d80f6486c11e1d7cf7b84">IA_MinMax</a> (Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>)</td></tr>
+<tr class="memdesc:ae4e127d8510d80f6486c11e1d7cf7b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec couleur.  <br /></td></tr>
+<tr class="separator:ae4e127d8510d80f6486c11e1d7cf7b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f10d4d2e6c100b37cebea4a86a47175" id="r_a2f10d4d2e6c100b37cebea4a86a47175"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f10d4d2e6c100b37cebea4a86a47175">IA_MinMax</a> (const <a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp;other)</td></tr>
+<tr class="memdesc:a2f10d4d2e6c100b37cebea4a86a47175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par copie.  <br /></td></tr>
+<tr class="separator:a2f10d4d2e6c100b37cebea4a86a47175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf713533b7168794491a8b97e57ed325" id="r_acf713533b7168794491a8b97e57ed325"><td class="memItemLeft" align="right" valign="top"><a id="acf713533b7168794491a8b97e57ed325" name="acf713533b7168794491a8b97e57ed325"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~IA_MinMax</b> ()</td></tr>
+<tr class="memdesc:acf713533b7168794491a8b97e57ed325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br /></td></tr>
+<tr class="separator:acf713533b7168794491a8b97e57ed325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f92ef73e338e1ca8a2278182d83bb92" id="r_a3f92ef73e338e1ca8a2278182d83bb92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f92ef73e338e1ca8a2278182d83bb92">operator=</a> (const <a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp;other)</td></tr>
+<tr class="memdesc:a3f92ef73e338e1ca8a2278182d83bb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opérateur d'affectation.  <br /></td></tr>
+<tr class="separator:a3f92ef73e338e1ca8a2278182d83bb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf127760115412522145b647af0ef5df" id="r_acf127760115412522145b647af0ef5df"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf127760115412522145b647af0ef5df">choisirCoup</a> (const <a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;plateau)</td></tr>
+<tr class="memdesc:acf127760115412522145b647af0ef5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choisit le meilleur coup selon l'algorithme MinMax.  <br /></td></tr>
+<tr class="separator:acf127760115412522145b647af0ef5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdae11016bbc88727a695f86f008fde" id="r_a0fdae11016bbc88727a695f86f008fde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fdae11016bbc88727a695f86f008fde">evaluerPlateau</a> (const <a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;plateau)</td></tr>
+<tr class="memdesc:a0fdae11016bbc88727a695f86f008fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Évalue l'état global du plateau.  <br /></td></tr>
+<tr class="separator:a0fdae11016bbc88727a695f86f008fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e55ab9de411af944218989ec5ed4282" id="r_a6e55ab9de411af944218989ec5ed4282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e55ab9de411af944218989ec5ed4282">evaluer</a> (int nbrPions, int Pions_adverse) const</td></tr>
+<tr class="memdesc:a6e55ab9de411af944218989ec5ed4282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Évalue une ligne de quatre cases.  <br /></td></tr>
+<tr class="separator:a6e55ab9de411af944218989ec5ed4282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783668d374bb1e88524ea06dc444cd74" id="r_a783668d374bb1e88524ea06dc444cd74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a783668d374bb1e88524ea06dc444cd74">min_max</a> (<a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;plateau, int <a class="el" href="#abb051aaacca15bed01c02bb5f0471083">profondeur</a>, int alpha, int beta, bool estMax)</td></tr>
+<tr class="memdesc:a783668d374bb1e88524ea06dc444cd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applique l'algorithme MinMax avec élagage alpha-bêta.  <br /></td></tr>
+<tr class="separator:a783668d374bb1e88524ea06dc444cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_joueur_i_a"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_joueur_i_a')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_joueur_i_a.html">JoueurIA</a></td></tr>
+<tr class="memitem:aa474f7fcabf500780c4f0a8f14ba88ae inherit pub_methods_class_joueur_i_a" id="r_aa474f7fcabf500780c4f0a8f14ba88ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae">JoueurIA</a> (Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>)</td></tr>
+<tr class="memdesc:aa474f7fcabf500780c4f0a8f14ba88ae inherit pub_methods_class_joueur_i_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec couleur.  <br /></td></tr>
+<tr class="separator:aa474f7fcabf500780c4f0a8f14ba88ae inherit pub_methods_class_joueur_i_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e3af2ac1aac754e612b7250c47daa8 inherit pub_methods_class_joueur_i_a" id="r_a87e3af2ac1aac754e612b7250c47daa8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur_i_a.html#a87e3af2ac1aac754e612b7250c47daa8">JoueurIA</a> (string <a class="el" href="class_joueur.html#abaee0b4f259181bf66dbab54bef971bb">nom</a>, Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>)</td></tr>
+<tr class="memdesc:a87e3af2ac1aac754e612b7250c47daa8 inherit pub_methods_class_joueur_i_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec nom et couleur.  <br /></td></tr>
+<tr class="separator:a87e3af2ac1aac754e612b7250c47daa8 inherit pub_methods_class_joueur_i_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b8581e5ed6506b594cd9e73c33362e inherit pub_methods_class_joueur_i_a" id="r_ae3b8581e5ed6506b594cd9e73c33362e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur_i_a.html#ae3b8581e5ed6506b594cd9e73c33362e">JoueurIA</a> (const <a class="el" href="class_joueur_i_a.html">JoueurIA</a> &amp;other)</td></tr>
+<tr class="memdesc:ae3b8581e5ed6506b594cd9e73c33362e inherit pub_methods_class_joueur_i_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par copie.  <br /></td></tr>
+<tr class="separator:ae3b8581e5ed6506b594cd9e73c33362e inherit pub_methods_class_joueur_i_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae030a20833abc6c15c426c4769d8688c inherit pub_methods_class_joueur_i_a" id="r_ae030a20833abc6c15c426c4769d8688c"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>~JoueurIA</b> ()</td></tr>
+<tr class="memdesc:ae030a20833abc6c15c426c4769d8688c inherit pub_methods_class_joueur_i_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br /></td></tr>
+<tr class="separator:ae030a20833abc6c15c426c4769d8688c inherit pub_methods_class_joueur_i_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454d23bbe2a080d68769dd6097176222 inherit pub_methods_class_joueur_i_a" id="r_a454d23bbe2a080d68769dd6097176222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joueur_i_a.html">JoueurIA</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur_i_a.html#a454d23bbe2a080d68769dd6097176222">operator=</a> (const <a class="el" href="class_joueur_i_a.html">JoueurIA</a> &amp;other)</td></tr>
+<tr class="memdesc:a454d23bbe2a080d68769dd6097176222 inherit pub_methods_class_joueur_i_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opérateur d'affectation.  <br /></td></tr>
+<tr class="separator:a454d23bbe2a080d68769dd6097176222 inherit pub_methods_class_joueur_i_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_joueur"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_joueur')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_joueur.html">Joueur</a></td></tr>
+<tr class="memitem:a921b7f8dcb1389d7fdadf5eb2cd1e0fd inherit pub_methods_class_joueur" id="r_a921b7f8dcb1389d7fdadf5eb2cd1e0fd"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Joueur</b> (std::string <a class="el" href="class_joueur.html#abaee0b4f259181bf66dbab54bef971bb">nom</a>, Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>)</td></tr>
+<tr class="separator:a921b7f8dcb1389d7fdadf5eb2cd1e0fd inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d53e9b702cdf3a362c9d6dd799722d inherit pub_methods_class_joueur" id="r_a42d53e9b702cdf3a362c9d6dd799722d"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Joueur</b> (Pion <a class="el" href="class_joueur.html#a674981c6797dbf817149322f9f071c48">couleur</a>)</td></tr>
+<tr class="separator:a42d53e9b702cdf3a362c9d6dd799722d inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f96efd372cb06fd2c88565e2ef88fca inherit pub_methods_class_joueur" id="r_a5f96efd372cb06fd2c88565e2ef88fca"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Joueur</b> (const <a class="el" href="class_joueur.html">Joueur</a> &amp;other)</td></tr>
+<tr class="separator:a5f96efd372cb06fd2c88565e2ef88fca inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5612ac5e4d8831700e7c1636dd4eda1e inherit pub_methods_class_joueur" id="r_a5612ac5e4d8831700e7c1636dd4eda1e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_joueur.html">Joueur</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_joueur.html">Joueur</a> &amp;other)</td></tr>
+<tr class="separator:a5612ac5e4d8831700e7c1636dd4eda1e inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04eaeeda184cfba380d5210bc035a8ed inherit pub_methods_class_joueur" id="r_a04eaeeda184cfba380d5210bc035a8ed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a04eaeeda184cfba380d5210bc035a8ed">getNom</a> () const</td></tr>
+<tr class="memdesc:a04eaeeda184cfba380d5210bc035a8ed inherit pub_methods_class_joueur"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nom du joueur.  <br /></td></tr>
+<tr class="separator:a04eaeeda184cfba380d5210bc035a8ed inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1213cdf4783d3ec18a5f86a08b830522 inherit pub_methods_class_joueur" id="r_a1213cdf4783d3ec18a5f86a08b830522"><td class="memItemLeft" align="right" valign="top">Pion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a1213cdf4783d3ec18a5f86a08b830522">getCouleur</a> () const</td></tr>
+<tr class="memdesc:a1213cdf4783d3ec18a5f86a08b830522 inherit pub_methods_class_joueur"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la couleur du joueur.  <br /></td></tr>
+<tr class="separator:a1213cdf4783d3ec18a5f86a08b830522 inherit pub_methods_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:abb051aaacca15bed01c02bb5f0471083" id="r_abb051aaacca15bed01c02bb5f0471083"><td class="memItemLeft" align="right" valign="top"><a id="abb051aaacca15bed01c02bb5f0471083" name="abb051aaacca15bed01c02bb5f0471083"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>profondeur</b></td></tr>
+<tr class="memdesc:abb051aaacca15bed01c02bb5f0471083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Profondeur de recherche de l'algorithme. <br /></td></tr>
+<tr class="separator:abb051aaacca15bed01c02bb5f0471083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_joueur"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_joueur')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="class_joueur.html">Joueur</a></td></tr>
+<tr class="memitem:abaee0b4f259181bf66dbab54bef971bb inherit pro_attribs_class_joueur" id="r_abaee0b4f259181bf66dbab54bef971bb"><td class="memItemLeft" align="right" valign="top">
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nom</b></td></tr>
+<tr class="memdesc:abaee0b4f259181bf66dbab54bef971bb inherit pro_attribs_class_joueur"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nom du joueur. <br /></td></tr>
+<tr class="separator:abaee0b4f259181bf66dbab54bef971bb inherit pro_attribs_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674981c6797dbf817149322f9f071c48 inherit pro_attribs_class_joueur" id="r_a674981c6797dbf817149322f9f071c48"><td class="memItemLeft" align="right" valign="top">
+Pion&#160;</td><td class="memItemRight" valign="bottom"><b>couleur</b></td></tr>
+<tr class="memdesc:a674981c6797dbf817149322f9f071c48 inherit pro_attribs_class_joueur"><td class="mdescLeft">&#160;</td><td class="mdescRight">Couleur du pion du joueur. <br /></td></tr>
+<tr class="separator:a674981c6797dbf817149322f9f071c48 inherit pro_attribs_class_joueur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Attributs protégés statiques</h2></td></tr>
+<tr class="memitem:a217031dd536043f457cceb1912244de4" id="r_a217031dd536043f457cceb1912244de4"><td class="memItemLeft" align="right" valign="top"><a id="a217031dd536043f457cceb1912244de4" name="a217031dd536043f457cceb1912244de4"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>ordreX</b> [] = {2, 1, 3, 0, 4}</td></tr>
+<tr class="separator:a217031dd536043f457cceb1912244de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94d41cf6de339bdc3d1e366bc0146f0" id="r_ad94d41cf6de339bdc3d1e366bc0146f0"><td class="memItemLeft" align="right" valign="top"><a id="ad94d41cf6de339bdc3d1e366bc0146f0" name="ad94d41cf6de339bdc3d1e366bc0146f0"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>ordreY</b> [] = {1, 2, 0, 3}</td></tr>
+<tr class="separator:ad94d41cf6de339bdc3d1e366bc0146f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Intelligence artificielle utilisant l'algorithme MinMax. </p>
+<p>Cette IA évalue les coups possibles sur le plateau afin de choisir le coup ayant le meilleur score. Elle utilise aussi l'élagage alpha-bêta pour limiter le nombre de situations à explorer. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a350b220b2dbaa4ece7fb35addfc9a0d1" name="a350b220b2dbaa4ece7fb35addfc9a0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350b220b2dbaa4ece7fb35addfc9a0d1">&#9670;&#160;</a></span>IA_MinMax() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IA_MinMax::IA_MinMax </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>nom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pion</td>          <td class="paramname"><span class="paramname"><em>couleur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ProfondeurEntree</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur avec nom, couleur et profondeur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nom</td><td>Nom de l'IA. </td></tr>
+    <tr><td class="paramname">couleur</td><td>Couleur du pion de l'IA. </td></tr>
+    <tr><td class="paramname">ProfondeurEntree</td><td>Profondeur de recherche de l'algorithme. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1_cgraph.png" border="0" usemap="#aclass_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1_cgraph" id="aclass_i_a___min_max_a350b220b2dbaa4ece7fb35addfc9a0d1_cgraph">
+<area shape="rect" title="Constructeur avec nom, couleur et profondeur." alt="" coords="5,5,167,32"/>
+<area shape="rect" href="class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae" title="Constructeur avec couleur." alt="" coords="215,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="167,16,202,19,196,19,167,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4e127d8510d80f6486c11e1d7cf7b84" name="ae4e127d8510d80f6486c11e1d7cf7b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e127d8510d80f6486c11e1d7cf7b84">&#9670;&#160;</a></span>IA_MinMax() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IA_MinMax::IA_MinMax </td>
+          <td>(</td>
+          <td class="paramtype">Pion</td>          <td class="paramname"><span class="paramname"><em>couleur</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur avec couleur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">couleur</td><td>Couleur du pion de l'IA. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84_cgraph.png" border="0" usemap="#aclass_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84_cgraph" id="aclass_i_a___min_max_ae4e127d8510d80f6486c11e1d7cf7b84_cgraph">
+<area shape="rect" title="Constructeur avec couleur." alt="" coords="5,5,167,32"/>
+<area shape="rect" href="class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae" title="Constructeur avec couleur." alt="" coords="215,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="167,16,202,19,196,19,167,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f10d4d2e6c100b37cebea4a86a47175" name="a2f10d4d2e6c100b37cebea4a86a47175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f10d4d2e6c100b37cebea4a86a47175">&#9670;&#160;</a></span>IA_MinMax() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IA_MinMax::IA_MinMax </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur par copie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="class_i_a___min_max.html" title="Intelligence artificielle utilisant l&#39;algorithme MinMax.">IA_MinMax</a> à copier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175_cgraph.png" border="0" usemap="#aclass_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175_cgraph" id="aclass_i_a___min_max_a2f10d4d2e6c100b37cebea4a86a47175_cgraph">
+<area shape="rect" title="Constructeur par copie." alt="" coords="5,31,167,57"/>
+<area shape="rect" href="class_i_a___min_max.html#a350b220b2dbaa4ece7fb35addfc9a0d1" title="Constructeur avec nom, couleur et profondeur." alt="" coords="215,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="167,32,202,30,197,31,168,37"/>
+<area shape="rect" href="class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae" title="Constructeur avec couleur." alt="" coords="424,31,557,57"/>
+<area shape="poly" title=" " alt="" coords="167,41,409,41,408,47,167,47"/>
+<area shape="poly" title=" " alt="" coords="376,26,411,33,406,33,376,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="acf127760115412522145b647af0ef5df" name="acf127760115412522145b647af0ef5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf127760115412522145b647af0ef5df">&#9670;&#160;</a></span>choisirCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int, int &gt; IA_MinMax::choisirCoup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>plateau</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Choisit le meilleur coup selon l'algorithme MinMax. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plateau</td><td>Plateau de jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Paire d'entiers représentant le coup choisi. </dd></dl>
+
+<p>Implémente <a class="el" href="class_joueur.html#adce372ce3fe11f9aaa4646ff76e3b917">Joueur</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_acf127760115412522145b647af0ef5df_cgraph.png" border="0" usemap="#aclass_i_a___min_max_acf127760115412522145b647af0ef5df_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_acf127760115412522145b647af0ef5df_cgraph" id="aclass_i_a___min_max_acf127760115412522145b647af0ef5df_cgraph">
+<area shape="rect" title="Choisit le meilleur coup selon l&#39;algorithme MinMax." alt="" coords="5,155,170,181"/>
+<area shape="rect" href="class_plateau3_d.html#a0f44dd28d8192635148534ea06d3d1c6" title="Ajoute un pion sur le plateau." alt="" coords="424,104,585,131"/>
+<area shape="poly" title=" " alt="" coords="169,153,217,147,411,125,408,129,218,152,171,158"/>
+<area shape="rect" href="class_plateau3_d.html#aaa4aaa2b4fc4ba5342545c50582727f5" title="Vérifie si un coup est valide. *." alt="" coords="665,189,808,232"/>
+<area shape="poly" title=" " alt="" coords="170,171,650,203,648,207,170,176"/>
+<area shape="rect" href="class_plateau3_d.html#a7f5584e140ec72285791db2cb5430f6f" title="Vérifie si un joueur a gagné. *." alt="" coords="672,5,801,48"/>
+<area shape="poly" title=" " alt="" coords="121,152,217,119,336,90,456,66,659,36,654,38,457,72,337,95,218,124,124,156"/>
+<area shape="rect" href="class_i_a___min_max.html#a783668d374bb1e88524ea06dc444cd74" title="Applique l&#39;algorithme MinMax avec élagage alpha&#45;bêta." alt="" coords="218,243,366,269"/>
+<area shape="poly" title=" " alt="" coords="121,179,247,235,243,238,121,185"/>
+<area shape="rect" href="class_plateau3_d.html#a14e5c4fc0b4dbb27967bcfaea9b05036" title="Retire le dernier pion d&#39;une colonne. *." alt="" coords="428,357,582,384"/>
+<area shape="poly" title=" " alt="" coords="101,179,151,228,184,255,219,279,267,303,318,323,417,353,412,354,316,328,265,308,216,284,180,260,147,232,101,185"/>
+<area shape="poly" title=" " alt="" coords="547,129,596,147,644,168,674,183,668,183,642,173,594,152,547,134"/>
+<area shape="rect" href="class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="878,227,1017,253"/>
+<area shape="poly" title=" " alt="" coords="585,122,703,141,767,156,831,175,875,194,915,218,910,218,872,199,829,180,766,161,702,146,585,128"/>
+<area shape="rect" href="class_plateau3_d.html#aa66da86ffc57a0be55d1ffc9849b6511" title=" " alt="" coords="666,72,807,115"/>
+<area shape="poly" title=" " alt="" coords="584,107,654,101,649,103,586,112"/>
+<area shape="poly" title=" " alt="" coords="537,101,642,58,662,53,657,55,644,62,539,106"/>
+<area shape="poly" title=" " alt="" coords="808,218,865,228,860,228,808,223"/>
+<area shape="poly" title=" " alt="" coords="313,240,468,141,472,138,316,244"/>
+<area shape="poly" title=" " alt="" coords="366,246,652,218,647,221,367,251"/>
+<area shape="poly" title=" " alt="" coords="257,242,251,234,255,224,269,218,292,216,316,219,331,227,325,228,315,224,292,221,270,223,259,228,256,233,262,243"/>
+<area shape="rect" href="class_plateau3_d.html#addfbd0793d93c7ae2c2d240dc5c10617" title="Indique si la partie est terminée. *." alt="" coords="426,256,584,283"/>
+<area shape="poly" title=" " alt="" coords="366,258,413,263,407,264,366,263"/>
+<area shape="rect" href="class_i_a___min_max.html#a0fdae11016bbc88727a695f86f008fde" title="Évalue l&#39;état global du plateau." alt="" coords="414,307,595,333"/>
+<area shape="poly" title=" " alt="" coords="336,267,415,292,441,302,436,302,413,297,335,273"/>
+<area shape="poly" title=" " alt="" coords="309,267,355,305,415,343,431,352,426,351,413,348,352,309,307,272"/>
+<area shape="poly" title=" " alt="" coords="581,303,643,292,865,254,860,255,644,297,582,309"/>
+<area shape="rect" href="class_i_a___min_max.html#a6e55ab9de411af944218989ec5ed4282" title="Évalue une ligne de quatre cases." alt="" coords="668,307,805,333"/>
+<area shape="poly" title=" " alt="" coords="596,317,655,320,650,320,596,323"/>
+<area shape="rect" href="class_plateau3_d.html#ab3701fe1c7bbf8a7eaae072c0f095583" title="Retourne l&#39;ensemble des lignes gagnantes possibles. *." alt="" coords="643,357,830,384"/>
+<area shape="poly" title=" " alt="" coords="569,331,660,353,655,353,569,337"/>
+<area shape="poly" title=" " alt="" coords="541,382,599,400,673,414,713,417,753,415,792,408,828,394,864,368,894,334,917,299,933,269,937,266,921,301,898,337,868,372,831,398,793,413,753,420,713,422,672,419,598,405,540,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e55ab9de411af944218989ec5ed4282" name="a6e55ab9de411af944218989ec5ed4282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e55ab9de411af944218989ec5ed4282">&#9670;&#160;</a></span>evaluer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IA_MinMax::evaluer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nbrPions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>Pions_adverse</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Évalue une ligne de quatre cases. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbrPions</td><td>Nombre de pions de l'IA. </td></tr>
+    <tr><td class="paramname">Pions_adverse</td><td>Nombre de pions adverses. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Score de la ligne. </dd></dl>
+
+</div>
+</div>
+<a id="a0fdae11016bbc88727a695f86f008fde" name="a0fdae11016bbc88727a695f86f008fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdae11016bbc88727a695f86f008fde">&#9670;&#160;</a></span>evaluerPlateau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IA_MinMax::evaluerPlateau </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>plateau</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Évalue l'état global du plateau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plateau</td><td>Plateau à évaluer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Score associé au plateau. </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_a0fdae11016bbc88727a695f86f008fde_cgraph.png" border="0" usemap="#aclass_i_a___min_max_a0fdae11016bbc88727a695f86f008fde_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_a0fdae11016bbc88727a695f86f008fde_cgraph" id="aclass_i_a___min_max_a0fdae11016bbc88727a695f86f008fde_cgraph">
+<area shape="rect" title="Évalue l&#39;état global du plateau." alt="" coords="5,56,187,83"/>
+<area shape="rect" href="class_i_a___min_max.html#a6e55ab9de411af944218989ec5ed4282" title="Évalue une ligne de quatre cases." alt="" coords="259,5,396,32"/>
+<area shape="poly" title=" " alt="" coords="160,53,251,35,246,37,161,58"/>
+<area shape="rect" href="class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="258,56,398,83"/>
+<area shape="poly" title=" " alt="" coords="187,67,245,69,240,70,188,72"/>
+<area shape="rect" href="class_plateau3_d.html#ab3701fe1c7bbf8a7eaae072c0f095583" title="Retourne l&#39;ensemble des lignes gagnantes possibles. *." alt="" coords="235,107,421,133"/>
+<area shape="poly" title=" " alt="" coords="161,81,251,102,246,104,160,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a783668d374bb1e88524ea06dc444cd74" name="a783668d374bb1e88524ea06dc444cd74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783668d374bb1e88524ea06dc444cd74">&#9670;&#160;</a></span>min_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IA_MinMax::min_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_plateau3_d.html">Plateau3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>plateau</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>profondeur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>beta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>estMax</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applique l'algorithme MinMax avec élagage alpha-bêta. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plateau</td><td>Plateau simulé. </td></tr>
+    <tr><td class="paramname">profondeur</td><td>Profondeur restante. </td></tr>
+    <tr><td class="paramname">alpha</td><td>Meilleur score déjà trouvé pour le joueur maximisant. </td></tr>
+    <tr><td class="paramname">beta</td><td>Meilleur score déjà trouvé pour le joueur minimisant. </td></tr>
+    <tr><td class="paramname">estMax</td><td>Indique si le tour simulé est celui de l'IA. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Score du meilleur coup trouvé. </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_a783668d374bb1e88524ea06dc444cd74_cgraph.png" border="0" usemap="#aclass_i_a___min_max_a783668d374bb1e88524ea06dc444cd74_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_a783668d374bb1e88524ea06dc444cd74_cgraph" id="aclass_i_a___min_max_a783668d374bb1e88524ea06dc444cd74_cgraph">
+<area shape="rect" title="Applique l&#39;algorithme MinMax avec élagage alpha&#45;bêta." alt="" coords="5,200,154,227"/>
+<area shape="poly" title=" " alt="" coords="43,200,37,191,41,182,56,175,80,173,105,176,120,184,115,186,103,181,79,179,57,181,45,185,42,191,48,199"/>
+<area shape="rect" href="class_plateau3_d.html#a0f44dd28d8192635148534ea06d3d1c6" title="Ajoute un pion sur le plateau." alt="" coords="212,131,372,157"/>
+<area shape="poly" title=" " alt="" coords="122,197,236,161,233,165,124,202"/>
+<area shape="rect" href="class_plateau3_d.html#aaa4aaa2b4fc4ba5342545c50582727f5" title="Vérifie si un coup est valide. *." alt="" coords="452,5,596,48"/>
+<area shape="poly" title=" " alt="" coords="93,198,138,157,168,135,200,116,260,90,322,68,440,40,435,43,324,74,262,95,203,121,171,140,142,162,97,201"/>
+<area shape="rect" href="class_plateau3_d.html#addfbd0793d93c7ae2c2d240dc5c10617" title="Indique si la partie est terminée. *." alt="" coords="213,200,372,227"/>
+<area shape="poly" title=" " alt="" coords="153,211,200,212,195,215,155,216"/>
+<area shape="rect" href="class_i_a___min_max.html#a0fdae11016bbc88727a695f86f008fde" title="Évalue l&#39;état global du plateau." alt="" coords="202,288,383,315"/>
+<area shape="poly" title=" " alt="" coords="114,225,246,280,242,283,114,230"/>
+<area shape="rect" href="class_plateau3_d.html#a14e5c4fc0b4dbb27967bcfaea9b05036" title="Retire le dernier pion d&#39;une colonne. *." alt="" coords="215,364,370,391"/>
+<area shape="poly" title=" " alt="" coords="94,224,141,271,203,325,252,356,246,356,200,329,137,275,93,230"/>
+<area shape="poly" title=" " alt="" coords="315,128,430,64,459,53,454,56,432,69,318,132"/>
+<area shape="rect" href="class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="665,164,805,191"/>
+<area shape="poly" title=" " alt="" coords="335,128,392,113,463,101,541,97,580,101,618,108,666,128,707,155,702,155,663,132,617,113,579,106,541,103,464,106,393,118,337,132"/>
+<area shape="rect" href="class_plateau3_d.html#aa66da86ffc57a0be55d1ffc9849b6511" title=" " alt="" coords="454,123,594,165"/>
+<area shape="poly" title=" " alt="" coords="372,141,441,143,436,145,373,147"/>
+<area shape="rect" href="class_plateau3_d.html#a7f5584e140ec72285791db2cb5430f6f" title="Vérifie si un joueur a gagné. *." alt="" coords="460,189,589,232"/>
+<area shape="poly" title=" " alt="" coords="342,155,447,187,442,189,342,161"/>
+<area shape="poly" title=" " alt="" coords="584,46,619,64,672,107,715,152,709,152,668,111,616,69,584,51"/>
+<area shape="poly" title=" " alt="" coords="383,291,496,274,557,260,616,242,662,221,700,200,705,198,664,225,618,246,559,265,497,279,384,296"/>
+<area shape="rect" href="class_i_a___min_max.html#a6e55ab9de411af944218989ec5ed4282" title="Évalue une ligne de quatre cases." alt="" coords="456,307,593,333"/>
+<area shape="poly" title=" " alt="" coords="383,306,443,313,437,314,384,311"/>
+<area shape="rect" href="class_plateau3_d.html#ab3701fe1c7bbf8a7eaae072c0f095583" title="Retourne l&#39;ensemble des lignes gagnantes possibles. *." alt="" coords="431,357,617,384"/>
+<area shape="poly" title=" " alt="" coords="336,313,432,343,459,353,454,353,430,348,335,318"/>
+<area shape="poly" title=" " alt="" coords="329,389,388,407,462,420,502,422,542,419,580,410,616,394,640,376,661,354,693,302,714,249,726,207,730,204,719,251,697,304,665,357,643,380,619,398,582,415,543,424,502,427,462,425,386,412,328,394"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f92ef73e338e1ca8a2278182d83bb92" name="a3f92ef73e338e1ca8a2278182d83bb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f92ef73e338e1ca8a2278182d83bb92">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp; IA_MinMax::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_i_a___min_max.html">IA_MinMax</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opérateur d'affectation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="class_i_a___min_max.html" title="Intelligence artificielle utilisant l&#39;algorithme MinMax.">IA_MinMax</a> à copier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Référence vers l'IA courante. </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92_cgraph.png" border="0" usemap="#aclass_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92_cgraph" alt=""/></div>
+<map name="aclass_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92_cgraph" id="aclass_i_a___min_max_a3f92ef73e338e1ca8a2278182d83bb92_cgraph">
+<area shape="rect" title="Opérateur d&#39;affectation." alt="" coords="5,31,156,57"/>
+<area shape="rect" href="class_i_a___min_max.html#a350b220b2dbaa4ece7fb35addfc9a0d1" title="Constructeur avec nom, couleur et profondeur." alt="" coords="204,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="156,32,191,30,186,31,157,37"/>
+<area shape="rect" href="class_joueur_i_a.html#a454d23bbe2a080d68769dd6097176222" title="Opérateur d&#39;affectation." alt="" coords="216,56,352,83"/>
+<area shape="poly" title=" " alt="" coords="156,51,203,59,198,59,156,56"/>
+<area shape="rect" href="class_joueur_i_a.html#aa474f7fcabf500780c4f0a8f14ba88ae" title="Constructeur avec couleur." alt="" coords="413,31,546,57"/>
+<area shape="poly" title=" " alt="" coords="365,26,400,33,395,33,365,32"/>
+<area shape="poly" title=" " alt="" coords="353,58,395,55,400,54,353,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>src/<a class="el" href="_i_a___min_max_8h_source.html">IA_MinMax.h</a></li>
+<li>src/<b>IA_MinMax.cpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_a___min_max.html">IA_MinMax</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

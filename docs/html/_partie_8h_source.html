@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de src/Partie.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_partie_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Partie.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PARTIE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PARTIE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Joueur.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Plateau3D.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_partie.html">   18</a></span><span class="keyword">class </span><a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a>(<a class="code hl_class" href="class_joueur.html">Joueur</a>* <a class="code hl_variable" href="class_partie.html#a7c32f695c86d897c371c251ee96c0f3f">J1</a>, <a class="code hl_class" href="class_joueur.html">Joueur</a>* <a class="code hl_variable" href="class_partie.html#a81838fb3f2894b615d303ee2224f14bc">J2</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a> &amp; other);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_partie.html#ae4afeb7336bb84427272cfb7018b5e3d">~Partie</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a> &amp; <a class="code hl_function" href="class_partie.html#aaedb6c3f7693b298f6de33f4e1067b04">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie</a> &amp; other);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_partie.html#af1b834d9a94a141af6ca1b6197d6f89f">victoire_tour</a>(<a class="code hl_class" href="class_joueur.html">Joueur</a> *j);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_partie.html#a932d5700f97a39216697feff60960b1b">lancer</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="class_joueur.html">Joueur</a>* <a class="code hl_function" href="class_partie.html#ae170a55b1096fbe4b941399cbf03a8ec">lancer_silencieux</a>(<span class="keywordtype">bool</span> j1commence);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_partie.html#a344426fb14180c4e5c71b6ebdd27216b">   81</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_plateau3_d.html">Plateau3D</a>&amp; <a class="code hl_function" href="class_partie.html#a344426fb14180c4e5c71b6ebdd27216b">getPlateau</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_partie.html#a04b94f80ceffaf74473d55af294c8ede">plateau</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_partie.html#a7c32f695c86d897c371c251ee96c0f3f">   86</a></span>    <a class="code hl_class" href="class_joueur.html">Joueur</a>* <a class="code hl_variable" href="class_partie.html#a7c32f695c86d897c371c251ee96c0f3f">J1</a>;          </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_partie.html#a81838fb3f2894b615d303ee2224f14bc">   87</a></span>    <a class="code hl_class" href="class_joueur.html">Joueur</a>* <a class="code hl_variable" href="class_partie.html#a81838fb3f2894b615d303ee2224f14bc">J2</a>;          </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_partie.html#a04b94f80ceffaf74473d55af294c8ede">   88</a></span>    <a class="code hl_class" href="class_plateau3_d.html">Plateau3D</a> <a class="code hl_variable" href="class_partie.html#a04b94f80ceffaf74473d55af294c8ede">plateau</a>;   </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_partie.html#a559afd65491af7a43240f113b085f23d">   89</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_partie.html#a559afd65491af7a43240f113b085f23d">tours_joues</a> = 0; </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_joueur_html"><div class="ttname"><a href="class_joueur.html">Joueur</a></div><div class="ttdoc">Classe abstraite représentant un joueur.</div><div class="ttdef"><b>Definition</b> Joueur.h:20</div></div>
+<div class="ttc" id="aclass_partie_html_a04b94f80ceffaf74473d55af294c8ede"><div class="ttname"><a href="class_partie.html#a04b94f80ceffaf74473d55af294c8ede">Partie::plateau</a></div><div class="ttdeci">Plateau3D plateau</div><div class="ttdoc">Plateau de jeu.</div><div class="ttdef"><b>Definition</b> Partie.h:88</div></div>
+<div class="ttc" id="aclass_partie_html_a344426fb14180c4e5c71b6ebdd27216b"><div class="ttname"><a href="class_partie.html#a344426fb14180c4e5c71b6ebdd27216b">Partie::getPlateau</a></div><div class="ttdeci">const Plateau3D &amp; getPlateau() const</div><div class="ttdoc">Retourne le plateau de la partie.</div><div class="ttdef"><b>Definition</b> Partie.h:81</div></div>
+<div class="ttc" id="aclass_partie_html_a559afd65491af7a43240f113b085f23d"><div class="ttname"><a href="class_partie.html#a559afd65491af7a43240f113b085f23d">Partie::tours_joues</a></div><div class="ttdeci">int tours_joues</div><div class="ttdoc">Nombre de tours joués.</div><div class="ttdef"><b>Definition</b> Partie.h:89</div></div>
+<div class="ttc" id="aclass_partie_html_a7c32f695c86d897c371c251ee96c0f3f"><div class="ttname"><a href="class_partie.html#a7c32f695c86d897c371c251ee96c0f3f">Partie::J1</a></div><div class="ttdeci">Joueur * J1</div><div class="ttdoc">Premier joueur.</div><div class="ttdef"><b>Definition</b> Partie.h:86</div></div>
+<div class="ttc" id="aclass_partie_html_a81838fb3f2894b615d303ee2224f14bc"><div class="ttname"><a href="class_partie.html#a81838fb3f2894b615d303ee2224f14bc">Partie::J2</a></div><div class="ttdeci">Joueur * J2</div><div class="ttdoc">Deuxième joueur.</div><div class="ttdef"><b>Definition</b> Partie.h:87</div></div>
+<div class="ttc" id="aclass_partie_html_a932d5700f97a39216697feff60960b1b"><div class="ttname"><a href="class_partie.html#a932d5700f97a39216697feff60960b1b">Partie::lancer</a></div><div class="ttdeci">void lancer()</div><div class="ttdoc">Lance le déroulement complet de la partie.</div><div class="ttdef"><b>Definition</b> Partie.cpp:56</div></div>
+<div class="ttc" id="aclass_partie_html_aaedb6c3f7693b298f6de33f4e1067b04"><div class="ttname"><a href="class_partie.html#aaedb6c3f7693b298f6de33f4e1067b04">Partie::operator=</a></div><div class="ttdeci">Partie &amp; operator=(const Partie &amp;other)</div><div class="ttdoc">Opérateur égal.</div><div class="ttdef"><b>Definition</b> Partie.cpp:30</div></div>
+<div class="ttc" id="aclass_partie_html_ae170a55b1096fbe4b941399cbf03a8ec"><div class="ttname"><a href="class_partie.html#ae170a55b1096fbe4b941399cbf03a8ec">Partie::lancer_silencieux</a></div><div class="ttdeci">Joueur * lancer_silencieux(bool j1commence)</div><div class="ttdoc">Lance une partie sans affichage détaillé.</div><div class="ttdef"><b>Definition</b> Partie.cpp:81</div></div>
+<div class="ttc" id="aclass_partie_html_ae40831aad10fc4a391295e2ea1447b5a"><div class="ttname"><a href="class_partie.html#ae40831aad10fc4a391295e2ea1447b5a">Partie::Partie</a></div><div class="ttdeci">Partie()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition</b> Partie.cpp:7</div></div>
+<div class="ttc" id="aclass_partie_html_ae4afeb7336bb84427272cfb7018b5e3d"><div class="ttname"><a href="class_partie.html#ae4afeb7336bb84427272cfb7018b5e3d">Partie::~Partie</a></div><div class="ttdeci">~Partie()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition</b> Partie.cpp:19</div></div>
+<div class="ttc" id="aclass_partie_html_af1b834d9a94a141af6ca1b6197d6f89f"><div class="ttname"><a href="class_partie.html#af1b834d9a94a141af6ca1b6197d6f89f">Partie::victoire_tour</a></div><div class="ttdeci">bool victoire_tour(Joueur *j)</div><div class="ttdoc">Joue le tour d&#39;un joueur et vérifie s&#39;il gagne.</div><div class="ttdef"><b>Definition</b> Partie.cpp:40</div></div>
+<div class="ttc" id="aclass_plateau3_d_html"><div class="ttname"><a href="class_plateau3_d.html">Plateau3D</a></div><div class="ttdoc">Représente le plateau de jeu du Puissance 4 en 3D.</div><div class="ttdef"><b>Definition</b> Plateau3D.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Partie.h</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

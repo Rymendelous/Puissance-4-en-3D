@@ -1,0 +1,31 @@
+\doxysection{arbitre.\+h}
+\hypertarget{arbitre_8h_source}{}\label{arbitre_8h_source}\index{src/arbitre.h@{src/arbitre.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ arbitre.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 30\ avr.\ 2026}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ dtromeur}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ARBITRE\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ARBITRE\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}position.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}mpi.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }arbitre\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ list<position>\ partie;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ arbitre();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~arbitre();}
+\DoxyCodeLine{00018\ \ \ \ \ arbitre(\textcolor{keyword}{const}\ arbitre\ \&other);}
+\DoxyCodeLine{00019\ \ \ \ \ arbitre\&\ operator=(\textcolor{keyword}{const}\ arbitre\ \&other);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \mbox{\hyperlink{classposition}{position}}\ receiveCoup(\ \textcolor{keywordtype}{int}\ rank);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ sendCoup(\mbox{\hyperlink{classposition}{position}},\ \textcolor{keywordtype}{int}\ rank);}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ARBITRE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

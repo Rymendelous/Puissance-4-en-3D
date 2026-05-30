@@ -1,0 +1,49 @@
+\doxysection{Référence du fichier src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Programme principal utilisant MPI.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include "{}mpi.\+h"{}}\newline
+{\ttfamily \#include "{}Pion.\+hpp"{}}\newline
+{\ttfamily \#include "{}Plateau3\+D.\+h"{}}\newline
+{\ttfamily \#include "{}IA\+\_\+\+Min\+Max.\+h"{}}\newline
+{\ttfamily \#include "{}arbitre.\+h"{}}\newline
+{\ttfamily \#include "{}Joueur\+MPI.\+h"{}}\newline
+{\ttfamily \#include "{}position.\+h"{}}\newline
+Graphe des dépendances par inclusion de main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_af178fd1cc4937056b4dd1cb604bc8dd1}\label{main_8cpp_af178fd1cc4937056b4dd1cb604bc8dd1} 
+\mbox{\hyperlink{classposition}{position}} {\bfseries vers\+Position} (int x, int y)
+\item 
+\Hypertarget{main_8cpp_a7d776cfc5ffd821f2387fb09446d5885}\label{main_8cpp_a7d776cfc5ffd821f2387fb09446d5885} 
+std\+::pair$<$ int, int $>$ {\bfseries vers\+Coordonnees} (\mbox{\hyperlink{classposition}{position}} p)
+\item 
+\Hypertarget{main_8cpp_aaa5ef3bb5b0cc7746d07cd5ef645f79b}\label{main_8cpp_aaa5ef3bb5b0cc7746d07cd5ef645f79b} 
+\mbox{\hyperlink{classposition}{position}} {\bfseries signal\+Fin} ()
+\item 
+\Hypertarget{main_8cpp_ad7f0e03e435b2366b8b6766f8624aeb2}\label{main_8cpp_ad7f0e03e435b2366b8b6766f8624aeb2} 
+bool {\bfseries est\+Signal\+Fin} (\mbox{\hyperlink{classposition}{position}} p)
+\item 
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Programme principal utilisant MPI. 
+
+Ce fichier lance une partie entre deux IA Min\+Max qui communiquent avec un arbitre grâce à MPI. 

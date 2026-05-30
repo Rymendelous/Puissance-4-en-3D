@@ -1,0 +1,9 @@
+<map id="IA_MinMax::evaluerPlateau" name="IA_MinMax::evaluerPlateau">
+<area shape="rect" id="Node000001" title="Évalue l&#39;état global du plateau." alt="" coords="5,56,187,83"/>
+<area shape="rect" id="Node000002" href="$class_i_a___min_max.html#a6e55ab9de411af944218989ec5ed4282" title="Évalue une ligne de quatre cases." alt="" coords="259,5,396,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,53,251,35,246,37,161,58"/>
+<area shape="rect" id="Node000003" href="$class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="258,56,398,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,67,245,69,240,70,188,72"/>
+<area shape="rect" id="Node000004" href="$class_plateau3_d.html#ab3701fe1c7bbf8a7eaae072c0f095583" title="Retourne l&#39;ensemble des lignes gagnantes possibles. *." alt="" coords="235,107,421,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,81,251,102,246,104,160,86"/>
+</map>

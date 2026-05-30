@@ -1,0 +1,28 @@
+<map id="IA_MinMax::min_max" name="IA_MinMax::min_max">
+<area shape="rect" id="Node000001" title="Applique l&#39;algorithme MinMax avec élagage alpha&#45;bêta." alt="" coords="5,200,154,227"/>
+<area shape="poly" id="edge13_Node000001_Node000001" title=" " alt="" coords="43,200,37,191,41,182,56,175,80,173,105,176,120,184,115,186,103,181,79,179,57,181,45,185,42,191,48,199"/>
+<area shape="rect" id="Node000002" href="$class_plateau3_d.html#a0f44dd28d8192635148534ea06d3d1c6" title="Ajoute un pion sur le plateau." alt="" coords="212,131,372,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,197,236,161,233,165,124,202"/>
+<area shape="rect" id="Node000003" href="$class_plateau3_d.html#aaa4aaa2b4fc4ba5342545c50582727f5" title="Vérifie si un coup est valide. *." alt="" coords="452,5,596,48"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="93,198,138,157,168,135,200,116,260,90,322,68,440,40,435,43,324,74,262,95,203,121,171,140,142,162,97,201"/>
+<area shape="rect" id="Node000007" href="$class_plateau3_d.html#addfbd0793d93c7ae2c2d240dc5c10617" title="Indique si la partie est terminée. *." alt="" coords="213,200,372,227"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="153,211,200,212,195,215,155,216"/>
+<area shape="rect" id="Node000008" href="$class_i_a___min_max.html#a0fdae11016bbc88727a695f86f008fde" title="Évalue l&#39;état global du plateau." alt="" coords="202,288,383,315"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="114,225,246,280,242,283,114,230"/>
+<area shape="rect" id="Node000011" href="$class_plateau3_d.html#a14e5c4fc0b4dbb27967bcfaea9b05036" title="Retire le dernier pion d&#39;une colonne. *." alt="" coords="215,364,370,391"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="94,224,141,271,203,325,252,356,246,356,200,329,137,275,93,230"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="315,128,430,64,459,53,454,56,432,69,318,132"/>
+<area shape="rect" id="Node000004" href="$class_plateau3_d.html#ae8cdfb02c55177a51f3eb57870ca6bb9" title="Accède à un pion du plateau. *." alt="" coords="665,164,805,191"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="335,128,392,113,463,101,541,97,580,101,618,108,666,128,707,155,702,155,663,132,617,113,579,106,541,103,464,106,393,118,337,132"/>
+<area shape="rect" id="Node000005" href="$class_plateau3_d.html#aa66da86ffc57a0be55d1ffc9849b6511" title=" " alt="" coords="454,123,594,165"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="372,141,441,143,436,145,373,147"/>
+<area shape="rect" id="Node000006" href="$class_plateau3_d.html#a7f5584e140ec72285791db2cb5430f6f" title="Vérifie si un joueur a gagné. *." alt="" coords="460,189,589,232"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="342,155,447,187,442,189,342,161"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="584,46,619,64,672,107,715,152,709,152,668,111,616,69,584,51"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="383,291,496,274,557,260,616,242,662,221,700,200,705,198,664,225,618,246,559,265,497,279,384,296"/>
+<area shape="rect" id="Node000009" href="$class_i_a___min_max.html#a6e55ab9de411af944218989ec5ed4282" title="Évalue une ligne de quatre cases." alt="" coords="456,307,593,333"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="383,306,443,313,437,314,384,311"/>
+<area shape="rect" id="Node000010" href="$class_plateau3_d.html#ab3701fe1c7bbf8a7eaae072c0f095583" title="Retourne l&#39;ensemble des lignes gagnantes possibles. *." alt="" coords="431,357,617,384"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="336,313,432,343,459,353,454,353,430,348,335,318"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="329,389,388,407,462,420,502,422,542,419,580,410,616,394,640,376,661,354,693,302,714,249,726,207,730,204,719,251,697,304,665,357,643,380,619,398,582,415,543,424,502,427,462,425,386,412,328,394"/>
+</map>

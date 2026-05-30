@@ -1,0 +1,11 @@
+<map id="Joueur" name="Joueur">
+<area shape="rect" id="Node000001" title="Classe abstraite représentant un joueur." alt="" coords="84,5,144,32"/>
+<area shape="rect" id="Node000002" href="$class_joueur_humain.html" title="Représente un joueur humain." alt="" coords="5,80,111,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,47,70,81,65,78,96,42"/>
+<area shape="rect" id="Node000003" href="$class_joueur_i_a.html" title="Représente un joueur contrôlé par une intelligence artificielle." alt="" coords="135,80,208,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,42,164,79,159,80,133,47"/>
+<area shape="rect" id="Node000004" href="$class_i_a___aleatoire.html" title="Intelligence artificielle qui choisit ses coups aléatoirement." alt="" coords="68,155,160,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="154,118,126,156,122,152,149,120"/>
+<area shape="rect" id="Node000005" href="$class_i_a___min_max.html" title="Intelligence artificielle utilisant l&#39;algorithme MinMax." alt="" coords="184,155,271,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="192,117,220,155,215,154,189,121"/>
+</map>

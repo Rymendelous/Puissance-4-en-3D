@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('main_8cpp.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programme principal utilisant MPI.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &quot;mpi.h&quot;</code><br />
+<code>#include &quot;Pion.hpp&quot;</code><br />
+<code>#include &quot;Plateau3D.h&quot;</code><br />
+<code>#include &quot;IA_MinMax.h&quot;</code><br />
+<code>#include &quot;arbitre.h&quot;</code><br />
+<code>#include &quot;JoueurMPI.h&quot;</code><br />
+<code>#include &quot;position.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
+<map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
+<area shape="rect" title="Programme principal utilisant MPI." alt="" coords="633,5,730,32"/>
+<area shape="rect" title=" " alt="" coords="575,229,646,256"/>
+<area shape="poly" title=" " alt="" coords="677,31,657,81,635,153,619,216,615,213,630,152,652,79,673,35"/>
+<area shape="rect" title=" " alt="" coords="938,80,998,107"/>
+<area shape="poly" title=" " alt="" coords="730,30,925,80,920,81,730,35"/>
+<area shape="rect" title=" " alt="" coords="1021,80,1075,107"/>
+<area shape="poly" title=" " alt="" coords="730,24,852,45,1009,79,1004,80,851,50,730,30"/>
+<area shape="rect" title=" " alt="" coords="845,155,899,181"/>
+<area shape="poly" title=" " alt="" coords="730,17,768,21,809,32,847,50,878,78,885,93,888,109,884,141,879,138,883,109,880,95,874,82,844,54,807,37,767,27,731,22"/>
+<area shape="rect" href="_pion_8hpp_source.html" title=" " alt="" coords="69,379,142,405"/>
+<area shape="poly" title=" " alt="" coords="630,21,469,28,366,36,261,49,164,67,83,92,51,108,28,125,13,145,8,167,8,244,15,281,33,314,56,343,80,368,75,369,52,347,28,317,10,282,3,244,3,166,8,143,24,122,49,103,81,87,162,62,260,43,366,31,469,23,635,19"/>
+<area shape="rect" href="_plateau3_d_8h_source.html" title=" " alt="" coords="245,304,339,331"/>
+<area shape="poly" title=" " alt="" coords="667,34,322,297,319,292,663,31"/>
+<area shape="rect" href="_i_a___min_max_8h_source.html" title=" " alt="" coords="323,80,421,107"/>
+<area shape="poly" title=" " alt="" coords="630,33,437,80,435,75,635,30"/>
+<area shape="rect" href="arbitre_8h_source.html" title=" " alt="" coords="795,80,864,107"/>
+<area shape="poly" title=" " alt="" coords="707,30,792,72,787,73,707,35"/>
+<area shape="rect" href="position_8h_source.html" title=" " alt="" coords="683,155,760,181"/>
+<area shape="poly" title=" " alt="" coords="676,30,665,67,663,87,666,106,678,126,695,145,689,144,674,129,662,108,658,87,660,66,673,34"/>
+<area shape="rect" href="_joueur_m_p_i_8h_source.html" title=" " alt="" coords="676,80,772,107"/>
+<area shape="poly" title=" " alt="" coords="689,30,712,67,706,66,688,35"/>
+<area shape="rect" title=" " alt="" coords="305,453,359,480"/>
+<area shape="poly" title=" " alt="" coords="142,402,292,450,288,454,141,408"/>
+<area shape="poly" title=" " alt="" coords="257,333,153,375,151,370,262,329"/>
+<area shape="poly" title=" " alt="" coords="282,330,259,366,254,385,257,404,273,426,295,445,290,444,269,430,252,406,248,385,254,364,278,333"/>
+<area shape="rect" title=" " alt="" coords="267,379,317,405"/>
+<area shape="poly" title=" " alt="" coords="294,329,294,364,290,362,290,333"/>
+<area shape="rect" title=" " alt="" coords="341,379,398,405"/>
+<area shape="poly" title=" " alt="" coords="306,329,348,368,342,368,305,334"/>
+<area shape="poly" title=" " alt="" coords="330,109,289,127,238,153,187,188,145,231,127,263,116,299,108,364,103,362,110,298,122,261,141,228,184,184,235,149,287,123,334,106"/>
+<area shape="poly" title=" " alt="" coords="391,104,422,127,453,158,479,197,487,218,489,241,489,319,486,342,478,364,449,400,411,429,374,451,372,446,408,425,445,397,473,361,481,341,484,318,484,241,481,220,474,199,449,161,418,131,391,110"/>
+<area shape="rect" href="_joueur_i_a_8h_source.html" title=" " alt="" coords="250,155,334,181"/>
+<area shape="poly" title=" " alt="" coords="356,109,319,146,315,142,360,105"/>
+<area shape="poly" title=" " alt="" coords="247,182,207,202,186,215,167,231,145,263,129,298,112,364,107,362,124,297,140,260,163,228,182,211,204,197,251,179"/>
+<area shape="poly" title=" " alt="" coords="303,179,360,260,391,317,413,378,416,392,413,406,396,430,373,448,371,443,392,426,408,404,411,392,408,379,386,319,355,263,302,185"/>
+<area shape="poly" title=" " alt="" coords="294,180,295,289,289,288,290,184"/>
+<area shape="rect" href="_joueur_8h_source.html" title=" " alt="" coords="178,229,249,256"/>
+<area shape="poly" title=" " alt="" coords="276,184,240,221,236,217,280,180"/>
+<area shape="poly" title=" " alt="" coords="206,255,125,368,121,365,202,258"/>
+<area shape="poly" title=" " alt="" coords="214,254,220,323,229,365,248,404,268,427,295,447,289,446,265,431,243,407,224,367,214,324,211,259"/>
+<area shape="poly" title=" " alt="" coords="227,254,270,293,265,294,227,259"/>
+<area shape="poly" title=" " alt="" coords="838,105,860,142,854,141,836,110"/>
+<area shape="rect" title=" " alt="" coords="783,155,822,181"/>
+<area shape="poly" title=" " alt="" coords="827,105,814,142,810,138,823,109"/>
+<area shape="poly" title=" " alt="" coords="813,106,754,148,752,143,808,108"/>
+<area shape="poly" title=" " alt="" coords="704,181,644,223,641,218,700,183"/>
+<area shape="poly" title=" " alt="" coords="721,180,712,218,692,257,650,310,610,346,566,375,507,408,438,438,374,458,373,453,436,433,504,403,563,370,607,341,646,306,687,255,707,216,717,183"/>
+<area shape="poly" title=" " alt="" coords="717,180,695,219,660,258,598,301,531,336,467,362,414,381,412,376,465,357,529,331,595,297,657,254,691,216,713,183"/>
+<area shape="rect" title=" " alt="" coords="772,229,818,256"/>
+<area shape="poly" title=" " alt="" coords="735,179,774,219,769,218,733,184"/>
+<area shape="poly" title=" " alt="" coords="714,106,673,156,628,219,625,215,669,153,710,109"/>
+<area shape="poly" title=" " alt="" coords="750,105,835,147,830,148,750,110"/>
+<area shape="poly" title=" " alt="" coords="738,105,781,144,775,144,737,110"/>
+<area shape="poly" title=" " alt="" coords="725,105,725,140,720,138,722,109"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af178fd1cc4937056b4dd1cb604bc8dd1" id="r_af178fd1cc4937056b4dd1cb604bc8dd1"><td class="memItemLeft" align="right" valign="top"><a id="af178fd1cc4937056b4dd1cb604bc8dd1" name="af178fd1cc4937056b4dd1cb604bc8dd1"></a>
+<a class="el" href="classposition.html">position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>versPosition</b> (int x, int y)</td></tr>
+<tr class="separator:af178fd1cc4937056b4dd1cb604bc8dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d776cfc5ffd821f2387fb09446d5885" id="r_a7d776cfc5ffd821f2387fb09446d5885"><td class="memItemLeft" align="right" valign="top"><a id="a7d776cfc5ffd821f2387fb09446d5885" name="a7d776cfc5ffd821f2387fb09446d5885"></a>
+std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>versCoordonnees</b> (<a class="el" href="classposition.html">position</a> p)</td></tr>
+<tr class="separator:a7d776cfc5ffd821f2387fb09446d5885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5ef3bb5b0cc7746d07cd5ef645f79b" id="r_aaa5ef3bb5b0cc7746d07cd5ef645f79b"><td class="memItemLeft" align="right" valign="top"><a id="aaa5ef3bb5b0cc7746d07cd5ef645f79b" name="aaa5ef3bb5b0cc7746d07cd5ef645f79b"></a>
+<a class="el" href="classposition.html">position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>signalFin</b> ()</td></tr>
+<tr class="separator:aaa5ef3bb5b0cc7746d07cd5ef645f79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f0e03e435b2366b8b6766f8624aeb2" id="r_ad7f0e03e435b2366b8b6766f8624aeb2"><td class="memItemLeft" align="right" valign="top"><a id="ad7f0e03e435b2366b8b6766f8624aeb2" name="ad7f0e03e435b2366b8b6766f8624aeb2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>estSignalFin</b> (<a class="el" href="classposition.html">position</a> p)</td></tr>
+<tr class="separator:ad7f0e03e435b2366b8b6766f8624aeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Programme principal utilisant MPI. </p>
+<p>Ce fichier lance une partie entre deux IA MinMax qui communiquent avec un arbitre grâce à MPI. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+\doxysection{Pion.\+hpp}
+\hypertarget{_pion_8hpp_source}{}\label{_pion_8hpp_source}\index{src/Pion.hpp@{src/Pion.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PION\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PION\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum\ class}\ Pion\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Vide,}
+\DoxyCodeLine{00013\ \ \ \ \ Blanc,}
+\DoxyCodeLine{00014\ \ \ \ \ Noir}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{inline}\ std::string\ toString(Pion\ p)\{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{switch}\ (p)\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Pion::Blanc:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}O"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Pion::Noir\ :\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}X"{}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ default\ :\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{inline}\ Pion\ operator!(Pion\ p)\{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{switch}\ (p)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{case}\ Pion::Blanc:\ \textcolor{keywordflow}{return}\ Pion::Noir;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{case}\ Pion::Noir:\ \ \textcolor{keywordflow}{return}\ Pion::Blanc;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Pion::Vide;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,233 @@
+\doxysection{Référence de la classe Partie}
+\hypertarget{class_partie}{}\label{class_partie}\index{Partie@{Partie}}
+
+
+Gère le déroulement d\textquotesingle{}une partie de Puissance 4.  
+
+
+
+
+{\ttfamily \#include $<$Partie.\+h$>$}
+
+
+
+Graphe de collaboration de Partie\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_partie__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_partie_ae40831aad10fc4a391295e2ea1447b5a}\label{class_partie_ae40831aad10fc4a391295e2ea1447b5a} 
+{\bfseries Partie} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_partie_ae4840b74783cbbb8886466c60dff94be}{Partie}} (\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_partie_a7c32f695c86d897c371c251ee96c0f3f}{J1}}, \mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_partie_a81838fb3f2894b615d303ee2224f14bc}{J2}})
+\begin{DoxyCompactList}\small\item\em Constructeur avec deux joueurs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_partie_a9bbb215eb08f9108cd733ada69f2cdfb}{Partie}} (const \mbox{\hyperlink{class_partie}{Partie}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+\Hypertarget{class_partie_ae4afeb7336bb84427272cfb7018b5e3d}\label{class_partie_ae4afeb7336bb84427272cfb7018b5e3d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Partie} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_partie}{Partie}} \& \mbox{\hyperlink{class_partie_aaedb6c3f7693b298f6de33f4e1067b04}{operator=}} (const \mbox{\hyperlink{class_partie}{Partie}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur égal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_partie_af1b834d9a94a141af6ca1b6197d6f89f}{victoire\+\_\+tour}} (\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}j)
+\begin{DoxyCompactList}\small\item\em Joue le tour d\textquotesingle{}un joueur et vérifie s\textquotesingle{}il gagne. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partie_a932d5700f97a39216697feff60960b1b}{lancer}} ()
+\begin{DoxyCompactList}\small\item\em Lance le déroulement complet de la partie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_partie_ae170a55b1096fbe4b941399cbf03a8ec}{lancer\+\_\+silencieux}} (bool j1commence)
+\begin{DoxyCompactList}\small\item\em Lance une partie sans affichage détaillé. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \& \mbox{\hyperlink{class_partie_a344426fb14180c4e5c71b6ebdd27216b}{get\+Plateau}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le plateau de la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_partie_a7c32f695c86d897c371c251ee96c0f3f}\label{class_partie_a7c32f695c86d897c371c251ee96c0f3f} 
+\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*} {\bfseries J1}
+\begin{DoxyCompactList}\small\item\em Premier joueur. \end{DoxyCompactList}\item 
+\Hypertarget{class_partie_a81838fb3f2894b615d303ee2224f14bc}\label{class_partie_a81838fb3f2894b615d303ee2224f14bc} 
+\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*} {\bfseries J2}
+\begin{DoxyCompactList}\small\item\em Deuxième joueur. \end{DoxyCompactList}\item 
+\Hypertarget{class_partie_a04b94f80ceffaf74473d55af294c8ede}\label{class_partie_a04b94f80ceffaf74473d55af294c8ede} 
+\mbox{\hyperlink{class_plateau3_d}{Plateau3D}} {\bfseries plateau}
+\begin{DoxyCompactList}\small\item\em Plateau de jeu. \end{DoxyCompactList}\item 
+\Hypertarget{class_partie_a559afd65491af7a43240f113b085f23d}\label{class_partie_a559afd65491af7a43240f113b085f23d} 
+int {\bfseries tours\+\_\+joues} = 0
+\begin{DoxyCompactList}\small\item\em Nombre de tours joués. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gère le déroulement d\textquotesingle{}une partie de Puissance 4. 
+
+La classe \doxylink{class_partie}{Partie} est responsable de \+:
+\begin{DoxyItemize}
+\item la gestion des joueurs
+\item le suivi du plateau de jeu
+\item l’alternance des tours
+\item la détection de fin de partie 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_partie_ae4840b74783cbbb8886466c60dff94be}\index{Partie@{Partie}!Partie@{Partie}}
+\index{Partie@{Partie}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{Partie()}{Partie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_partie_ae4840b74783cbbb8886466c60dff94be} 
+Partie\+::\+Partie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{J1}{, }\item[{\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{J2}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec deux joueurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em J1} & Premier joueur. \\
+\hline
+{\em J2} & Deuxième joueur. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partie_a9bbb215eb08f9108cd733ada69f2cdfb}\index{Partie@{Partie}!Partie@{Partie}}
+\index{Partie@{Partie}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{Partie()}{Partie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_partie_a9bbb215eb08f9108cd733ada69f2cdfb} 
+Partie\+::\+Partie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_partie}{Partie}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_partie}{Partie} à copier. \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_partie_a9bbb215eb08f9108cd733ada69f2cdfb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_partie_a344426fb14180c4e5c71b6ebdd27216b}\index{Partie@{Partie}!getPlateau@{getPlateau}}
+\index{getPlateau@{getPlateau}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{getPlateau()}{getPlateau()}}
+{\footnotesize\ttfamily \label{class_partie_a344426fb14180c4e5c71b6ebdd27216b} 
+const \mbox{\hyperlink{class_plateau3_d}{Plateau3D}} \& Partie\+::get\+Plateau (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne le plateau de la partie. 
+
+\begin{DoxyReturn}{Renvoie}
+Référence constante vers le plateau. 
+\end{DoxyReturn}
+\Hypertarget{class_partie_a932d5700f97a39216697feff60960b1b}\index{Partie@{Partie}!lancer@{lancer}}
+\index{lancer@{lancer}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{lancer()}{lancer()}}
+{\footnotesize\ttfamily \label{class_partie_a932d5700f97a39216697feff60960b1b} 
+void Partie\+::lancer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lance le déroulement complet de la partie. 
+
+Cette méthode alterne les tours entre les deux joueurs jusqu\textquotesingle{}à ce qu\textquotesingle{}un joueur gagne ou que la partie se termine. Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_partie_a932d5700f97a39216697feff60960b1b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_partie_ae170a55b1096fbe4b941399cbf03a8ec}\index{Partie@{Partie}!lancer\_silencieux@{lancer\_silencieux}}
+\index{lancer\_silencieux@{lancer\_silencieux}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{lancer\_silencieux()}{lancer\_silencieux()}}
+{\footnotesize\ttfamily \label{class_partie_ae170a55b1096fbe4b941399cbf03a8ec} 
+\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*} Partie\+::lancer\+\_\+silencieux (\begin{DoxyParamCaption}\item[{bool}]{j1commence}{}\end{DoxyParamCaption})}
+
+
+
+Lance une partie sans affichage détaillé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em j1commence} & Indique si le joueur 1 commence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur vers le joueur gagnant, ou nullptr en cas de match nul. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_partie_ae170a55b1096fbe4b941399cbf03a8ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_partie_aaedb6c3f7693b298f6de33f4e1067b04}\index{Partie@{Partie}!operator=@{operator=}}
+\index{operator=@{operator=}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_partie_aaedb6c3f7693b298f6de33f4e1067b04} 
+\mbox{\hyperlink{class_partie}{Partie}} \& Partie\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_partie}{Partie}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Opérateur égal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & \doxylink{class_partie}{Partie} à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Référence vers la partie courante. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_partie_aaedb6c3f7693b298f6de33f4e1067b04_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_partie_af1b834d9a94a141af6ca1b6197d6f89f}\index{Partie@{Partie}!victoire\_tour@{victoire\_tour}}
+\index{victoire\_tour@{victoire\_tour}!Partie@{Partie}}
+\doxysubsubsection{\texorpdfstring{victoire\_tour()}{victoire\_tour()}}
+{\footnotesize\ttfamily \label{class_partie_af1b834d9a94a141af6ca1b6197d6f89f} 
+bool Partie\+::victoire\+\_\+tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Joue le tour d\textquotesingle{}un joueur et vérifie s\textquotesingle{}il gagne. 
+
+Le joueur choisit un coup, celui-\/ci est joué sur le plateau, puis la fonction vérifie si ce coup provoque une victoire.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em j} & Pointeur vers le joueur qui joue le tour. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le joueur gagne après son coup, false sinon. 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_partie_af1b834d9a94a141af6ca1b6197d6f89f_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/Partie.\+h\item 
+src/Partie.\+cpp\end{DoxyCompactItemize}
