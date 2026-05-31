@@ -1,52 +1,19 @@
-# Compilateur et flags
-CXX      := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra -g -MMD -MP
-INCLUDES := -I./include
+CC = mpicxx
 
-# Dossiers
-SRCDIR   := src
-OBJDIR   := obj
-BINDIR   := bin
+exe : exe1 exe2 exe3
 
-# Cible finale
-TARGET   := $(BINDIR)/puissance4
-TEST_TARGET := $(BINDIR)/test_suite
+exe1 :  TestJeu.o position.o arbitre.o joueur.o
+        ${CC} -o exe1 *.o
+exe2 :  TestJeu.o position.o arbitre.o joueur.o
+        ${CC} -o exe2 *.o
+exe3 :  TestJeu.o position.o arbitre.o joueur.o
+        ${CC} -o exe3 *.o
 
-# Détection automatique des sources et objets
-SRCS     := $(wildcard $(SRCDIR)/*.cpp)
-OBJS     := $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SRCS))
-DEPS 	 := $(OBJS:.o=.d)
+%.o: %.cpp
+        ${CC} -c $< -o $@
 
-# Règle par défaut
-all: $(TARGET)
-test: $(TEST_TARGET)
-	./$(TEST_TARGET)
+clean :
+        rm -f *.o exe
 
-# Édition de liens
-$(TARGET): $(filter-out $(OBJDIR)/test.o, $(OBJS)) | $(BINDIR)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-$(TEST_TARGET): $(filter-out $(OBJDIR)/main.o, $(OBJS)) | $(BINDIR)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-
-# Compilation des .o depuis les .cpp
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
-# Création des dossiers si absents
-$(OBJDIR):
-	mkdir -p $(OBJDIR)
-
-$(BINDIR):
-	mkdir -p $(BINDIR)
-
-# Nettoyage
-clean:
-	rm -rf $(OBJDIR) $(BINDIR)
-
-# Rebuild complet
-re: clean all
-
-# Pour éviter les conflits avec des fichiers nommés "all", "clean", etc.
-.PHONY: all clean re test
-
--include $(DEPS)
+run :
+        mpirun -n 3 ./exe1 ./exe2 ./exe3
