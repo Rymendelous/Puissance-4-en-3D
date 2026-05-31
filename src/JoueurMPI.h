@@ -25,8 +25,8 @@ class JoueurMPI {
 public:
 	JoueurMPI(int color);
 	virtual ~JoueurMPI();
-	JoueurMPI(const joueur &other);
-	JoueurMPI& operator=(const joueur &other);
+	JoueurMPI(const JoueurMPI &other);
+	JoueurMPI& operator=(const JoueurMPI &other);
 
 
 	position receiveCoup( int =2);
