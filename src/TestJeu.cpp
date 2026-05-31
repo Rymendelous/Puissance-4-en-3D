@@ -12,6 +12,8 @@
 #include "mpi.h" 
 #include "arbitre.h"
 #include "JoueurMPI.h"
+#include "IA_MinMax.h"
+#include "Pion.hpp"
 using namespace std;
  
 /**
@@ -20,59 +22,62 @@ using namespace std;
  */
  
 int main(int argc, char *argv[]) {
-	int n, rank, size, i;
-	bool joue=true;
-    position p;
-    int cpt=0;
+	int rank, size;
 	MPI::Init(argc, argv);
 	size = MPI::COMM_WORLD.Get_size();
 	rank = MPI::COMM_WORLD.Get_rank();
 
-	if (rank == 2){
-		arbitre AB;
-	 while (joue!=false){
-		p=AB.receiveCoup(0);
-		cout << "AB receive from 0:"; p.affiche();
-		cout << "AB send to 1:"; p.affiche();
-		AB.sendCoup(p,1);
+if (rank == 2) {
+        // arbitre
+        arbitre AB;
+        bool partieTerminee = false;
+        int tour = 0;
 
-		p=AB.receiveCoup(1);
-		cout << "AB receive from 1:" << p << endl;
-		cout << "AB send to 0:" << p << endl;
-		AB.sendCoup(p,0);
-		cpt++;
-		if (cpt==20) joue=false;
-	 }
-	}
+        while (!partieTerminee) {
+            int rankJoueurCourant = (tour % 2 == 0) ? 0 : 1;
+            int rankAdversaire = (tour % 2 == 0) ? 1 : 0;
+            Pion couleurCourante = (tour % 2 == 0) ? Pion::Blanc : Pion::Noir;
 
-	if (rank == 0){
-		JoueurMPI A(rank);
-	 while (joue!=false){
-		 // Move of player A (to implement)
-		 p=position::NumPosition(2*cpt); cpt++;
-		    cout << "A send:" << p << endl;
-			A.sendCoup(p,2);
-			p=A.receiveCoup(2);
-			cout << "A receive:" << p << endl;
+            // L'arbitre attend le coup
+            position p = AB.receiveCoup(rankJoueurCourant);
 
-			if (cpt==20) joue=false;
-		}
-	}
+            // Il traite le coup (mise a jour grille + check victoire)
+            partieTerminee = AB.traiterCoup(p, couleurCourante);
+            AB.afficherPlateau();
 
-	if (rank == 1){
-	   JoueurMPI B(rank);
-	while (joue!=false){
-			p=B.receiveCoup(2);
-			cout << "B receive:"<< p << endl;;
+            // Transmet le coup a l'adversaire (si le match continue)
+            if (!partieTerminee) {
+                AB.sendCoup(p, rankAdversaire);
+            }
+            tour++;
+        }
+    }
+    else {
+        // joueur
+        Pion maCouleur = (rank == 0) ? Pion::Blanc : Pion::Noir;
+        
+        // On instancie ton IA avec une profondeur de 3
+        IA_MinMax monIA("IA_MinMax", maCouleur, 3);
+        JoueurMPI monJoueurReseau(rank, &monIA);
 
-			p=position::NumPosition(2*cpt+1); cpt++;
-			cout << "B send:"<< p << endl;
-			B.sendCoup(p,2);
-			if (cpt==20) joue=false;
-	}
-		}
+        bool premierTour = true;
 
-	MPI::Finalize();
-	return 0;
+        
+        while (true) {
+            if (rank == 0 && premierTour) {
+                // Le Joueur 0 (Blanc) commence directement sans ecouter
+                monJoueurReseau.calculerEtEnvoyer(2);
+                premierTour = false;
+            } else {
+                // Les autres tours : on ecoute le coup de l'adversaire d'abord, puis on joue
+                monJoueurReseau.ecouterAdversaire(2);
+                monJoueurReseau.calculerEtEnvoyer(2);
+                premierTour = false;
+            }
+        }
+    }
+
+    MPI::Finalize();
+    return 0;
 }
 

@@ -10,8 +10,12 @@
 #include <list>
 #include "position.h"
 #include "mpi.h"
+#include "Plateau3D.h"
+#include "Pion.hpp"
+
 class arbitre {
-	list<position> partie;
+	std::list<position> partie;
+	Plateau3D plateau; // l'arbitre possède la grille pour surveiller le match 
 public:
 	arbitre();
 	virtual ~arbitre();
@@ -30,6 +34,13 @@ void sendCoup(position, int rank);
   *    the move is given as a 2D position instance
   *    attribute l is not taken into account.
   */
+
+// met a jour la grille de l'arbitre et verifie si le coup est gagnant
+bool traiterCoup(position p, Pion couleurJoueur);
+
+// pour afficher la grille dans le terminal
+void afficherPlateau();
+
 };
 
 #endif /* ARBITRE_H_ */
