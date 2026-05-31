@@ -7,6 +7,9 @@
 
 using namespace std;
 
+constexpr int IA_MinMax::ordreX[];
+constexpr int IA_MinMax::ordreY[];
+
 IA_MinMax::IA_MinMax(std::string nom, Pion couleur,int ProfondeurEntree) : JoueurIA(nom,couleur)
 {
 this->profondeur = ProfondeurEntree;
