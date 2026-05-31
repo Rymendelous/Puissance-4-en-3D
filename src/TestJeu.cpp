@@ -11,7 +11,7 @@
 #include <iostream>
 #include "mpi.h" 
 #include "arbitre.h"
-#include "joueur.h"
+#include "JoueurMPI.h"
 using namespace std;
  
 /**
