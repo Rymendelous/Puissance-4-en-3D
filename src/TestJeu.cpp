@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (rank == 0){
-		joueur A(rank);
+		JoueurMPI A(rank);
 	 while (joue!=false){
 		 // Move of player A (to implement)
 		 p=position::NumPosition(2*cpt); cpt++;
@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (rank == 1){
-	   joueur B(rank);
+	   JoueurMPI B(rank);
 	while (joue!=false){
 			p=B.receiveCoup(2);
 			cout << "B receive:"<< p << endl;;
