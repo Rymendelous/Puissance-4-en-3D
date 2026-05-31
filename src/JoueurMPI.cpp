@@ -70,9 +70,12 @@ void JoueurMPI::sendCoup(position p, int rank){
 
 void JoueurMPI::ecouterAdversaire(int rankArbitre) {
     position coupAdversaire = receiveCoup(rankArbitre);
-    int codeMPI = coupAdversaire.positionNumMPI(); 
-    int xAdverse = coupAdversaire.getalpha(coupAdversaire.h);
-    int yAdverse = coupAdversaire.v;
+    char* pointeur=(char*)&coupAdversaire;
+    char h_char=pointeur[0];
+    int v_int = *(int*)(pointeur + sizeof(char));
+
+    int xAdverse = coupAdversaire.getalpha(h_char);
+    int yAdverse = v_int;
     Pion couleurAdverse = (this->monIA->getCouleur() == Pion::Blanc) ? Pion::Noir : Pion::Blanc;
     plateau.ajouter_pion(xAdverse, yAdverse, couleurAdverse);
 }
