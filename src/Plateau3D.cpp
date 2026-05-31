@@ -1,6 +1,7 @@
 #include "Plateau3D.h"
 #include <iostream>
 #include "Pion.hpp"
+constexpr Vec3 Plateau3D::directions[];
 
 Plateau3D::Plateau3D()
 {
