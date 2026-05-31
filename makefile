@@ -2,11 +2,11 @@ CC = mpicxx
 
 exe : exe1 exe2 exe3
 
-exe1 :  TestJeu.o position.o arbitre.o joueur.o
+exe1 :  TestJeu.o position.o arbitre.o JoueurMPI.o
 	${CC} -o exe1 *.o
-exe2 :  TestJeu.o position.o arbitre.o joueur.o
+exe2 :  TestJeu.o position.o arbitre.o JoueurMPI.o
 	${CC} -o exe2 *.o
-exe3 :  TestJeu.o position.o arbitre.o joueur.o
+exe3 :  TestJeu.o position.o arbitre.o JoueurMPI.o
 	${CC} -o exe3 *.o
 
 %.o: src/%.cpp
