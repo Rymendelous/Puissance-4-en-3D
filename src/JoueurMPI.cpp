@@ -7,9 +7,10 @@
 
 #include "JoueurMPI.h"
 
-JoueurMPI::JoueurMPI(int color) {
+JoueurMPI::JoueurMPI(int color,Joueur* ia) {
 	me = MPI::COMM_WORLD.Get_rank();
     this->color=color;
+    this->monIA=ia;
 }
 
 JoueurMPI::~JoueurMPI() {
@@ -17,11 +18,17 @@ JoueurMPI::~JoueurMPI() {
 
 JoueurMPI::JoueurMPI(const JoueurMPI &o) {
     this->color=o.color;
+    this->plateau=o.plateau;
+    this->monIA=o.monIA;
 
 }
 
 JoueurMPI& JoueurMPI::operator=(const JoueurMPI &o) {
-    this->color=o.color;
+    if (this != &o){
+        this->color=o.color;
+        this->plateau=o.plateau;
+        this->monIA=o.monIA;
+    }
 	return *this;
 }
 /*
@@ -59,4 +66,22 @@ void JoueurMPI::sendCoup(position p, int rank){
 	int ii;
     ii = p.positionNumMPI();
     int ier=MPI_Send(&ii,1, MPI::INT,rank, 100,MPI::COMM_WORLD);
+}
+
+void JoueurMPI::ecouterAdversaire(int rankArbitre) {
+    position coupAdversaire = receiveCoup(rankArbitre);
+    int xAdverse = coupAdversaire.getalpha(coupAdversaire.h);
+    int yAdverse = coupAdversaire.v;
+    Pion couleurAdverse = (this->monIA->getCouleur() == Pion::Blanc) ? Pion::Noir : Pion::Blanc;
+    plateau.ajouter_pion(xAdverse, yAdverse, couleurAdverse);
+}
+
+void JoueurMPI::calculerEtEnvoyer(int rankArbitre) {
+    std::pair<int, int> monChoix = monIA->choisirCoup(plateau);
+    plateau.ajouter_pion(monChoix.first, monChoix.second, monIA->getCouleur());
+    
+    position monCoupPourLArbitre;
+    monCoupPourLArbitre.seth(monCoupPourLArbitre.getalpha(monChoix.first));
+    monCoupPourLArbitre.setv(monChoix.second);
+    sendCoup(monCoupPourLArbitre, rankArbitre);
 }

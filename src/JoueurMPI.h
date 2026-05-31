@@ -11,6 +11,10 @@
 #include <list>
 #include "position.h"
 #include "mpi.h"
+#include "Plateau3D.h"
+#include "Joueur.h"
+#include "Pion.hpp"
+
 using namespace std;
 class JoueurMPI {
 	/**
@@ -22,8 +26,10 @@ class JoueurMPI {
 	 */
 	int me;      /// rank number in the MPI communicator
     int color;   /// color of the player 0 or 1
+	Plateau3D plateau; // la vraie grille de jeu 
+	Joueur* monIA; // pointeur vers notre algo 
 public:
-	JoueurMPI(int color);
+	JoueurMPI(int color,Joueur* ia); // on modifie le constructeur pour lui donner notre IA
 	virtual ~JoueurMPI();
 	JoueurMPI(const JoueurMPI &other);
 	JoueurMPI& operator=(const JoueurMPI &other);
@@ -39,6 +45,9 @@ public:
      * \fn sends the player move to the referee
      *    the move is given as a position instance
 	 */
+	//les deux actions 
+	void ecouterAdversaire(int rankArbitre = 2);
+	void calculerEtEnvoyer(int rankArbitre = 2);
 };
 
 #endif /* JOUEURMPI_H_ */
