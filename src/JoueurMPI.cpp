@@ -70,6 +70,7 @@ void JoueurMPI::sendCoup(position p, int rank){
 
 void JoueurMPI::ecouterAdversaire(int rankArbitre) {
     position coupAdversaire = receiveCoup(rankArbitre);
+    int codeMPI = coupAdversaire.positionNumMPI(); 
     int xAdverse = coupAdversaire.getalpha(coupAdversaire.h);
     int yAdverse = coupAdversaire.v;
     Pion couleurAdverse = (this->monIA->getCouleur() == Pion::Blanc) ? Pion::Noir : Pion::Blanc;
