@@ -9,7 +9,7 @@ exe2 :  TestJeu.o position.o arbitre.o joueur.o
 exe3 :  TestJeu.o position.o arbitre.o joueur.o
 	${CC} -o exe3 *.o
 
-%.o: %.cpp
+%.o: src/%.cpp
 	${CC} -c $< -o $@
 
 clean :
