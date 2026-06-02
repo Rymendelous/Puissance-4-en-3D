@@ -9,7 +9,7 @@
 #include <iostream>
 int position::n=4;
 int position::m=5;
-vector<char> position::alpha={'A','B','C','D'};
+vector<char> position::alpha={'A','B','C','D','E'};
 position::position(char h, int v, int l) {
 	this->h=h;
 	this->v=v;

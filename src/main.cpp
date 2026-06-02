@@ -22,12 +22,12 @@ using namespace std;
 
 // Convertit les coordonnées (x, y) vers la classe position 
 position versPosition(int x, int y) {
-    return position('A' + y, x, 0); 
+    return position('A' + x, y, 0); 
 }
 
 // Convertit la classe position du vers les coordonnées (x, y)
 std::pair<int, int> versCoordonnees(position p) {
-    return {p.getv(), p.geth() - 'A'};
+    return {p.geth(), p.getv() - 'A'};
 }
 
 // Signal de fin pour l'arbitre
